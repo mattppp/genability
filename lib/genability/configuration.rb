@@ -11,7 +11,8 @@ module Genability
       :endpoint,
       :format,
       :user_agent,
-      :proxy
+      :proxy,
+      :debug_logging
     ].freeze
 
     # An array of valid request/response formats
@@ -32,8 +33,7 @@ module Genability
     DEFAULT_APPLICATION_KEY = nil
 
     # The endpoint that will be used to connect if none is set
-    #
-    DEFAULT_ENDPOINT = 'http://api.genability.com/rest/'
+    DEFAULT_ENDPOINT = 'https://api.genability.com/rest/'
 
     # The response format appended to the path and sent in the 'Accept' header if none is set
     #
@@ -45,6 +45,9 @@ module Genability
 
     # The user agent that will be sent to the API endpoint if none is set
     DEFAULT_USER_AGENT = "Genability API Ruby Gem".freeze
+
+    # By default, disable debug logging
+    DEFAULT_DEBUG_LOGGING = false
 
     # @private
     attr_accessor *VALID_OPTIONS_KEYS
@@ -75,6 +78,7 @@ module Genability
       self.format           = DEFAULT_FORMAT
       self.user_agent       = DEFAULT_USER_AGENT
       self.proxy            = DEFAULT_PROXY
+      self.debug_logging    = DEFAULT_DEBUG_LOGGING
     end
   end
 end

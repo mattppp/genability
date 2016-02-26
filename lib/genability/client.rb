@@ -8,6 +8,7 @@ module Genability
     require 'genability/client/load_serving_entity'
     require 'genability/client/price'
     require 'genability/client/property'
+    require 'genability/client/savings_analysis'
     require 'genability/client/season'
     require 'genability/client/tariff'
     require 'genability/client/territory'
@@ -24,6 +25,7 @@ module Genability
     include Genability::Client::Price
     include Genability::Client::Property
     include Genability::Client::Season
+    include Genability::Client::SavingsAnalysis
     include Genability::Client::Tariff
     include Genability::Client::Territory
     include Genability::Client::TimeOfUse

@@ -5,6 +5,9 @@ module Genability
   # Raised when Genability returns the HTTP status code 400
   class BadRequest < Error; end
 
+  # Raised when Genability returns the HTTP status code 401
+  class Unauthorized < Error; end
+
   # Raised when Genability returns the HTTP status code 403
   class Forbidden < Error; end
 

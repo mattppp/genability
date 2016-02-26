@@ -8,6 +8,7 @@ describe Faraday::Response do
 
   {
     400 => Genability::BadRequest,
+    401 => Genability::Unauthorized,
     403 => Genability::Forbidden,
     404 => Genability::NotFound,
     500 => Genability::ServerError,
@@ -16,7 +17,7 @@ describe Faraday::Response do
     context "when HTTP status is #{status}" do
 
       before(:each) do
-        stub_get('public/lses?appId=ValidAppID&appKey=ValidAppKey').
+        stub_get('public/lses').
           to_return(:status => status)
       end
 

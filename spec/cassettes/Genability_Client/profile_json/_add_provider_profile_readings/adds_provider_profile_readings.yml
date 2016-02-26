@@ -1,0 +1,160 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts
+    body:
+      encoding: UTF-8
+      string: '{"accountName":"Ruby Test"}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 27 Feb 2016 22:59:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"e4752a77-f02f-4e0d-b427-97e756ac16ea","providerAccountId":null,"accountName":"Ruby
+        Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+    http_version: 
+  recorded_at: Sat, 27 Feb 2016 22:59:48 GMT
+- request:
+    method: put
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles
+    body:
+      encoding: UTF-8
+      string: '{"accountId":"e4752a77-f02f-4e0d-b427-97e756ac16ea","providerProfileId":"add_provider_profile_readings_test"}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 27 Feb 2016 22:59:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"56d21e6919f08fde72d7a4bb","providerProfileId":"add_provider_profile_readings_test","accountId":"e4752a77-f02f-4e0d-b427-97e756ac16ea","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}]}'
+    http_version: 
+  recorded_at: Sat, 27 Feb 2016 22:59:48 GMT
+- request:
+    method: get
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/pid/add_provider_profile_readings_test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 27 Feb 2016 22:59:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"56d21e6919f08fde72d7a4bb","providerProfileId":"add_provider_profile_readings_test","accountId":"e4752a77-f02f-4e0d-b427-97e756ac16ea","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}]}'
+    http_version: 
+  recorded_at: Sat, 27 Feb 2016 22:59:48 GMT
+- request:
+    method: post
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/pid/add_provider_profile_readings_test/readings
+    body:
+      encoding: UTF-8
+      string: '{"readings":[{"fromDateTime":"2011-08-01T22:30:00.0-0700","toDateTime":"2011-08-01T22:45:00.0-0700","quantityUnit":"kWh","quantityValue":220}]}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html;charset=ISO-8859-1
+      Date:
+      - Sat, 27 Feb 2016 22:59:48 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=8926D98B82EC27414A7169E017C74944; Path=/; Secure; HttpOnly
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '120'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "status":"error",
+          "count":1,
+          "type":"Error",
+          "results":[{
+            "code":"404",
+            "message":"REST Resource Not Found"}]
+        }
+    http_version: 
+  recorded_at: Sat, 27 Feb 2016 22:59:48 GMT
+recorded_with: VCR 3.0.1

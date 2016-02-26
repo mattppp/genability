@@ -61,7 +61,21 @@ module Genability
         }.delete_if{ |k,v| v.nil? }
       end
 
+      def properties_params(options = nil)
+        return nil if options.nil?
+        options.map do |key_name, data|
+          [
+            ruby_to_camel_case(key_name),
+            {
+              'keyName' => ruby_to_camel_case(key_name),
+              'dataValue' => data.is_a?(Hash) ? data[:data_value] : data
+            }
+          ]
+        end.to_h.delete_if{ |k,v| v['dataValue'].nil? }
+      end
+
       def convert_to_boolean(value = nil)
+        return value if !value.is_a?(String)
         return nil if value.nil? || value.empty?
         value == "false" ? nil : "true"
       end
@@ -69,9 +83,9 @@ module Genability
       def multi_option_handler(value = nil)
         return nil if value.nil?
         if value.is_a?(Array)
-          value.collect{|x| x.upcase}.join(',')
+          value.collect{|x| x.to_s.upcase}.join(',')
         else
-          value.upcase
+          value.to_s.upcase
         end
       end
 
@@ -95,6 +109,27 @@ module Genability
         date_time.iso8601(1).gsub(/(?<=\-\d{2}):(?=\d{2})/, '')
       rescue
         nil
+      end
+
+      def format_to_ymd(date_time = nil)
+        if date_time.respond_to?(:strftime)
+          date_time.strftime("%Y-%m-%d")
+        else
+          parse_and_format_to_ymd(date_time)
+        end
+      end
+
+      def parse_and_format_to_ymd(date_time = nil)
+        parsed_date = Chronic.parse(date_time.to_s)
+        parsed_date = parsed_date.nil? ? Time.parse(date_time.to_s) : parsed_date
+        parsed_date.strftime("%Y-%m-%d")
+      rescue
+        nil
+      end
+
+      def ruby_to_camel_case(str)
+        return nil if str.nil?
+        str.to_s.gsub(/(?:^|_)(.)/){ $1.upcase }.gsub(/^[A-Z]/){ $&.downcase }.to_sym
       end
 
     end

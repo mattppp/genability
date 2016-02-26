@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts
+    body:
+      encoding: UTF-8
+      string: '{"accountName":"Ruby Test"}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 27 Feb 2016 23:07:14 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"3b852ad9-9eec-45cc-9f9d-845834fd02f5","providerAccountId":null,"accountName":"Ruby
+        Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+    http_version: 
+  recorded_at: Sat, 27 Feb 2016 23:07:14 GMT
+- request:
+    method: put
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles
+    body:
+      encoding: UTF-8
+      string: '{"accountId":"3b852ad9-9eec-45cc-9f9d-845834fd02f5","providerProfileId":"delete_profile_test"}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 27 Feb 2016 23:07:19 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"56d22c3b19f08fde72d7a529","providerProfileId":"delete_profile_test","accountId":"3b852ad9-9eec-45cc-9f9d-845834fd02f5","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}]}'
+    http_version: 
+  recorded_at: Sat, 27 Feb 2016 23:07:19 GMT
+- request:
+    method: delete
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/pid/delete_profile_test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 27 Feb 2016 23:07:19 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":0,"type":"UsageProfile","results":null}'
+    http_version: 
+  recorded_at: Sat, 27 Feb 2016 23:07:20 GMT
+recorded_with: VCR 3.0.1

@@ -6,10 +6,11 @@ describe "Genability" do
     it { Genability::Configuration::DEFAULT_ADAPTER.should == :net_http }
     it { Genability::Configuration::DEFAULT_APPLICATION_ID.should be_nil }
     it { Genability::Configuration::DEFAULT_APPLICATION_KEY.should be_nil }
-    it { Genability::Configuration::DEFAULT_ENDPOINT.should == 'http://api.genability.com/rest/' }
+    it { Genability::Configuration::DEFAULT_ENDPOINT.should == 'https://api.genability.com/rest/' }
     it { Genability::Configuration::DEFAULT_FORMAT.should == :json }
     it { Genability::Configuration::DEFAULT_USER_AGENT.should == 'Genability API Ruby Gem' }
     it { Genability::Configuration::DEFAULT_PROXY.should be_nil }
+    it { Genability::Configuration::DEBUG_LOGGING.should false }
   end
 
   context ".client" do
@@ -106,6 +107,19 @@ describe "Genability" do
     it "should set the proxy" do
       Genability.proxy = 'http://127.0.0.1'
       Genability.proxy.should == 'http://127.0.0.1'
+    end
+  end
+
+  context ".debug_logging" do
+    it "should return the default value of debug_logging" do
+      Genability.proxy.should == Genability::Configuration::DEFAULT_DEBUG_LOGGING
+    end
+  end
+
+  context ".debug_logging=" do
+    it "should set the value of debug_logging" do
+      Genability.debug_logging = true
+      Genability.debug_logging.should be true
     end
   end
 
