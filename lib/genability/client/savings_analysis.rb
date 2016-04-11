@@ -38,7 +38,8 @@ module Genability
         {
           "scenarios" => options[:scenarios],
           "keyName" => ruby_to_camel_case(options[:key_name]),
-          "dataValue" => options[:data_value].to_s
+          "dataValue" => options[:data_value].to_s,
+          "dataFactor" => options[:data_factor].to_s
         }.
         delete_if{ |k,v| v.nil? }
       end
