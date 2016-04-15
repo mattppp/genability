@@ -5,6 +5,7 @@ module Genability
     require 'genability/client/account'
     require 'genability/client/calculate'
     require 'genability/client/echo'
+    require 'genability/client/incentive'
     require 'genability/client/load_serving_entity'
     require 'genability/client/price'
     require 'genability/client/property'
@@ -21,6 +22,7 @@ module Genability
     include Genability::Client::Account
     include Genability::Client::Calculate
     include Genability::Client::Echo
+    include Genability::Client::Incentive
     include Genability::Client::LoadServingEntity
     include Genability::Client::Price
     include Genability::Client::Property

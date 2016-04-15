@@ -1,0 +1,491 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/beta/incentives?incentiveType=rebate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 15 Apr 2016 22:38:10 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":3379,"type":"Incentive","results":[{"incentiveId":3156262,"masterIncentiveId":3156262,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"refrigeration","minValue":0.00,"maxValue":0.00,"operator":"="}],"tariffCode":"None","incentiveName":"Commercial
+        Refrigeration Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"refrigeration","incentiveType":"rebate","rate":25.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"antiSweatHeaterControls","displayName":"Anti-Sweat
+        Heater Controls ","description":"Anti-Sweat Heater Controls. Requirements:
+        Display refrigerators must be equipped with humidity sensing controls that
+        reduce the amount of power supplied to the heaters. Must sense the relative
+        humidity in the air surrounding the display case and reduce or turn off the
+        anti-sweat heaters of the glass door (if applicable) and door frame during
+        periods of low humidity. Equivalent technologies that reduce or turn off anti-sweat
+        heaters depending on the level of condensation on the inner glass pane may
+        qualify. Rebate amount is based on the linear footage of the display case.
+        Installation address must have a commercial electric account with PG&E. Exclusions:
+        Please note that this rebate cannot be used in conjunction with the rebate
+        for New Refrigeration Display Case with Doors."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"refrigeration","minValue":0.00,"maxValue":0.00,"operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E. For item level specifications
+        refer to catalog."},{"incentiveId":3156263,"masterIncentiveId":3156263,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"foodService","operator":"="}],"tariffCode":"None","incentiveName":"Commercial
+        Food Service Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":null,"isExhausted":false,"projectType":"other","incentiveType":"rebate","rate":1000.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"commercialCombinationOvenSteamerElectric734","displayName":"Commercial
+        Combination Oven/Steamer Electric","description":"Commercial Combination Oven/Steamer
+        Electric. Requirements: Must have a cooking energy efficiency of 50 percent
+        or greater in steam mode and 70 percent cooking energy efficiency or greater
+        in convection mode, utilizing American Society for Testing and Materials (ASTM)
+        F2861 Must meet the idle energy rate requirements in the Electric Combination
+        Oven/Steamer Table catalog below, utilizing ASTM F2861. Installation address
+        must have a commercial electric account with PG&E."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"foodService","operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E. For item level specifications
+        refer to catalog."},{"incentiveId":3156266,"masterIncentiveId":3156266,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"airCool","operator":"="}],"tariffCode":"None","incentiveName":"Commercial
+        HVAC Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"hvac","incentiveType":"rebate","rate":50.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"replacementMultipleSpeedBrushlessPermanentMagnetBlowerMotor734","displayName":"Replacement
+        Multiple-Speed Brushless Permanent Magnet Blower Motor","description":"Replacement
+        Multiple-Speed Brushless Permanent Magnet Blower Motor. Requirements: Must
+        replace the existing permanent split capacitor motor for supply air blower
+        with a new super-efficient direct replace ment brushless permanent magnet
+        blower motor with built-incontroller. Motors must be 10 horse power or less
+        to be eligible for this rebate. Motor must be capable of plugging in to existing
+        controlboard. Only available to customers residing in climate zones 11,12
+        and13. Goto\r\nwww.pge.com/climatezones to find your climate zone. Installation
+        address must have a commercial electric account with PG&E. Exclusions: A Variable
+        Frequency Drive (VFD) is not eligible for this rebate."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"airCool","operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E.  For item level
+        specifications refer to catalog."},{"incentiveId":3156269,"masterIncentiveId":3156269,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"lighting","operator":"="}],"tariffCode":"None","incentiveName":"Commercial
+        Lighting Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"lighting","incentiveType":"rebate","rate":17.500000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"t8Fixtures2x22LampsFixtureRLOBallastFactor","displayName":"T8
+        2''x2'' - 2 Lamps High Performance Fixture with RLO Ballast","description":"T8
+        2''x2'' - 2 Lamps High Performance Fixture with RLO Ballast. Requirements:
+        New fixtures or new retrofit kits only, and onlycertain combinations of lamp
+        number and ballast factor are eligible. Fixture efficiency must exceed 80
+        percent. T8 measures are based on the savings provided by utilizinga one-lamp
+        or two-lamp fixture instead of the industry-standard three-lamp fixture. Additional
+        savings are realizedif a RLO ballast is used instead of the standard, base-caseNLO
+        ballast. Please note that savings are reduced if a HLOor VHLO ballast is used.
+        T5 measures are based on the savings provided by utilizinga two-lamp T5 fixture
+        instead of the industry-standardthree-lamp T8 fixture. Additional savings
+        are realized ifa NLO ballast is used instead of a HLO ballast. VHLO T5ballasts
+        are excluded due to insufficient savings relativeto the base case. These rebates
+        cannot be combined with rebates fromother catalog measures or other programs
+        claiminglighting savings.  Please refer to catalog for complete requirements."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"lighting","operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E. For item level specifications
+        refer to catalog."},{"incentiveId":3156271,"masterIncentiveId":3156271,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"waterHeat","operator":"="}],"tariffCode":"None","incentiveName":"Commercial
+        Water Heating Rebate","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"waterHeat","incentiveType":"rebate","rate":500.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"electricHeatPumpWaterHeater734","displayName":"Electric
+        Heat Pump Water Heater","description":"ENERGY STAR Electric Heat Pump\r\nWater
+        Heater EF of 2.0 or greater\r\n\r\nRequirements: Electric storage water heater
+        must have an Energy Factor of 2.0 or greater. Capacity must be 40 gallons
+        or more. Must be new and meet or exceed all applicable local, state and federal
+        standards. Only residential-style electric storage water heaters qualify for
+        this rebate. Goto www.energystar.gov for a list of ENERGYSTAR -qualifying
+        water heaters that meet or exceed the EF requirements. Check with your contractor
+        for installation requirements for your installation address. Installation
+        address must have a commercial electric account with PG&E. Must be a commercial
+        end-use customer. Exclusions: Instantaneous or tank less water heaters do
+        not qualify for this rebate\r\n"},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"waterHeat","operator":"="}],"summary":null,"requirements":"Requirements:
+        Electric storage water heater must have an Energy Factor of 2.0 or greater.
+        Capacity must be 40 gallons or more. Must be new and meet or exceed all applicable
+        local, state and federal standards. Only residential-style electric storage
+        water heaters qualify for this rebate. Goto www.energystar.gov for a list
+        of ENERGYSTAR -qualifying water heaters that meet or exceed the EF requirements.
+        Check with your contractor for installation requirements for your installation
+        address. Installation address must have a commercial electric account with
+        PG&E. Must be a commercial end-use customer. Exclusions: Instantaneous or
+        tank less water heaters do not qualify for this rebate"},{"incentiveId":3156273,"masterIncentiveId":3156273,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"electronics","operator":"="}],"tariffCode":"None","incentiveName":"Commercial
+        Business Computing Rebates","lseId":734,"lseName":"Pacific Gas & Electric
+        Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"majorAppliances","incentiveType":"rebate","rate":15.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"plugLoadOccupancySensorsF734","displayName":"Plug
+        Load Occupancy Sensors","description":"Plug Load Occupancy Sensors Requirements:
+        Only passive infrared and/or ultrasonic detectors are eligible. Plug load
+        sensors must control electricity using equipment in offices or cubicles, including
+        sharedcopiers and/or printers. Installation address must have a commercial
+        electric account with PG&E."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"electronics","operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E.\n\nFor item level
+        specifications refer to catalog."},{"incentiveId":3156274,"masterIncentiveId":3156274,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"appliances","operator":"="}],"tariffCode":"None","incentiveName":"Commercial
+        Appliances Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"majorAppliances","incentiveType":"rebate","rate":50.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"highEfficiencyClothesWasher734","displayName":"High-Efficiency
+        Clothes Washer","description":"High-Efficiency Clothes Washer CEE Tier 3 or
+        higher, MEF of 2.4 or greater, WF of 4.0 or less Requirements: Clothes washer
+        must be a Consortium for Energy Efficiency (CEE) Tier3 model or higher. Goto
+        www.cee1.org/com/cwsh/cwshspec.pdf\r\nfor a list of qualifying commercial
+        washers. The washer must have a Modified Energy Factor (MEF) of 2.4 or greater
+        and\r\na Water Factor of 4.0 or less. Installation address must have commercial
+        electric and or natural gas accounts with PG&E. Exclusions: Not all ENERGYSTAR
+        clotheswashers qualify for this rebate. CEE Tier1 and 2 models do not qualify."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"appliances","operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E. For item level specifications
+        refer to catalog."},{"incentiveId":3156308,"masterIncentiveId":3156308,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        HVAC Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"hvac","incentiveType":"rebate","rate":100.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"wholeHouseFan734","displayName":"Whole
+        House Fan","description":"Whole House Fan. Requirements: May be a new installation
+        where none previously existed. One rebate per installation address, regardless
+        of thenumber of units installed. The fan must move 1,000 cubic feet of air
+        per minute(CFM) or more and be permanently installed (connectedto the framing).
+        Consult manufacturer?s specications to determinethe proper fan size prior
+        to purchase. Louvers between the living space and the attic shouldcreate an
+        airtight seal when the fan is off. An insulated louver cover is also recommended
+        foruse in the winter. Go to www.pge.com/rebates for a list of qualifyingproducts.
+        Installation address must have an electricaccount with PG&E"},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E. For item level specifications
+        refer to catalog."},{"incentiveId":3156309,"masterIncentiveId":3156309,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"buildingShell","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        General Improvements Rebates","lseId":734,"lseName":"Pacific Gas & Electric
+        Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"buildingShell","incentiveType":"rebate","rate":0.200000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"coolRoofLowSlope734","displayName":"Cool
+        Roof Low Slope","description":"Cool Roof Low Slope available in Climate Zone
+        (CZ) 2, 4, 11 & 12 only. Customer must have electricity distributed by PG&E
+        to the installation address.  Only PG&E residential electric customers who
+        own an existing single family or mobile home are eligible. Must reside in
+        qualifying climate zone 2, 4, 11, 12 or 13. Only steep slope roofs qualify
+        in climate zone 13. To find your climate zone go to: www.pge.com/climatezones.
+        Customer must have a central air conditioning (AC) system  or be installing
+        a new AC system concurrently.  Customer must purchase and have installed roofing
+        materials that meet or exceed the Aged Solar Reflectance and Aged Thermal
+        Emittance levels specified in the Rebate Level and Product Specifications
+        Table along with being rated by the Cool Roof Rating Council (CRRC). The CRRC
+        maintains a directory and searchable database of rated products at www.coolroofs.org.
+        Exclusions:  Homes with portable or window air conditioning systems and evaporative
+        coolers (e.g. swamp coolers) do not qualify."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"buildingShell","operator":"="}],"summary":null,"requirements":"Only
+        PG&E residential electric customers who own an existing single family or mobile
+        \nhome are eligible.\n-Must reside in qualifying climate zones (CZ) 2, 4,
+        11, 12 or 13.\n-Only steep slope roofs qualify in climate zone 13. To find
+        your climate zone go to \nwww.pge.com/climatezones.\n-Customer must have a
+        central air conditioning (AC) system or be installing a new AC system concurrently.\n-Check
+        with your local city/county building department for any special requirements
+        \nrelated to your selected product.\n-Customer must purchase and have installed
+        roofing materials that meet or exceed the Aged Solar Reflectance and Aged
+        Thermal Emittance levels specified in the Rebate Level and Product Specifications
+        Table and that are rated by the Cool Roof Rating Council (CRRC).\n-The CRRC
+        maintains a directory and searchable database of rated products at www.coolroofs.org.\n-Installation
+        address must have an electric account with PG&E.\n"},{"incentiveId":3156310,"masterIncentiveId":3156310,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        Appliances Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"majorAppliances","incentiveType":"rebate","rate":50.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"highEfficiencyClothesWasher734","displayName":"High-Efficiency
+        Clothes Washer","description":"High-Efficiency Clothes Washer CEE Tier 3 or
+        higher, MEF of 2.4 or greater, WF of 4.0 or less Requirements: Clothes washer
+        must be a Consortium for Energy Efficiency (CEE) Tier3 model or higher. Goto
+        www.cee1.org/com/cwsh/cwshspec.pdf\r\nfor a list of qualifying commercial
+        washers. The washer must have a Modified Energy Factor (MEF) of 2.4 or greater
+        and\r\na Water Factor of 4.0 or less. Installation address must have commercial
+        electric and or natural gas accounts with PG&E. Exclusions: Not all ENERGYSTAR
+        clotheswashers qualify for this rebate. CEE Tier1 and 2 models do not qualify."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"summary":null,"requirements":"All
+        PG&E incentives apply towards the purchase of new or replacement energy-efficient
+        equipment. Used or rebuilt equipment is not eligible, and customers must include
+        proof that the appliances meet all the required energy efficiency specifications.
+        Please note that funding for these programs is limited and available on a
+        first-come, first-served basis until allocated funds are exhausted or the
+        program ends, whichever comes first. This program may be modified or terminated
+        without prior notice, and additional terms and conditions apply. Installation
+        address must have a commercial electric account withPG&E. For item level specifications
+        refer to catalog."},{"incentiveId":3156311,"masterIncentiveId":3156311,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"pool","operator":"="}],"tariffCode":"None","incentiveName":"Residential  Pool
+        Filtration Pumps Rebates","lseId":734,"lseName":"Pacific Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"pool","incentiveType":"rebate","rate":100.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"variableSpeedPoolPumpForFiltrationOnly734","displayName":"Variable-Speed
+        Pool Pump for Filtration Only","description":"Variable-Speed Pool Pump for
+        Filtration Only. Requirements: All pumps must be new, and must be purchased
+        and installed between January 1, 2013, and December 31, 2014. Rebates are
+        for qualifying pumps, three horsepower or less, installed on new or existing
+        residential in-ground swimming pools for primary filtration only. New pump
+        must be operated with a qualifying controller. Customer may either use an
+        existing qualifying controller or purchase and install a separate qualifying
+        controller unit if the new variable speed or variable-flow pump does not have
+        a built-in qualifying controller. Qualifying controller is a programmable
+        controller that meets CA Title 20 regulation requirements. Must be able to
+        operate the pool pump on at least two speeds and switch speeds automatically.
+        Must default to the lowest speed after one normal cycle (24 hours) if temporary
+        high speed override capability exists. Exclusions: Above-ground pool, pond,
+        pool cleaner/booster, spa and water feature pumps do not qualify."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"pool","operator":"="}],"summary":null,"requirements":"Follow
+        all manufacturer installation requirements.\n-All pumps must be new, and must
+        be purchased and installed between January 1, 2013, and December 31, 2014.\n-Equipment
+        and materials must meet or exceed all applicable local, state and federal
+        standards.\n-Rebates are for qualifying pumps, three horsepower or less, installed
+        on new or existing residential in-ground swimming pools for primary filtration
+        only. Visit www.pge.com/pools for a list of qualifying pumps.\n-Above-ground
+        pool, pond, pool cleaner/booster, spa and water feature pumps do not qualify.\n-New
+        pump must be operated with a qualifying controller.\n Customer may either
+        use an existing qualifying controller or purchase and install a separate qualifying
+        controller unit if the new variable speed or variable-flow pump does not have
+        a built-in qualifying controller.\nQualifying controller is a programmable
+        controller that meets CA Title 20 regulation requirements. Must be able to
+        operate the pool pump on at least two speeds and switch speeds automatically"},{"incentiveId":3156328,"masterIncentiveId":3156328,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"waterHeat","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        Water Heater Rebate","lseId":1228,"lseName":"Southern California Edison Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"waterHeat","incentiveType":"rebate","rate":200.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"hybridElectricHeatPumpWaterHeater","displayName":"Hybrid
+        Electric Heat Pump Water Heater","description":"Hybrid Electric Heat Pump
+        Water Heater\r\n\r\nRequirements: Hybrid electric heat pump water heater must
+        have an energy factor of 2.0 or greater and be 40 gallons or greater. Install
+        the qualifying hybrid electric heat pump water heater by February 28, 2014.
+        Rebate is limited to hybrid electric heat pump water heaters that are 40 gallons
+        or greater. The new qualifying product must replace an existing electric water
+        heater. Proof of purchase must be provided with your application. One water
+        heater rebate per installation address.  \r\n\r\nExclusion: Tankless water
+        heaters do not qualify. Replacing a gas water heater with a hybrid electric
+        heat pump water heater does not qualify.  \r\n"},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"waterHeat","operator":"="}],"summary":null,"requirements":"Purchase
+        a new qualifying electric storage water heater between January 2013 and December
+        31, 2013. Tankless water heaters do not qualify. Replacing a gas water heater
+        with an electric unit does not qualify. Make sure the product appears on the
+        list of qualifying products that can be found at SCE website. Install the
+        qualifying electric storage water heater by February 28, 2014. The new qualifying
+        product must replace an existing electric water heater. Proof of purchase
+        must be provided with your application. Limit: One of any type of HEER water
+        heater rebate per Installation Address. For item level specifications refer
+        to catalog."},{"incentiveId":3156329,"masterIncentiveId":3156329,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        Clothes Washer Rebate","lseId":1228,"lseName":"Southern California Edison
+        Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"majorAppliances","incentiveType":"rebate","rate":50.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"energyStarQualifiedClothesWasher","displayName":"Energy
+        Star Qualified Clothes Washer","description":"Energy Star Qualified Clothes
+        Washer\r\n\r\nRequirements: Install the qualifying clothes washer by February
+        28, 2014. The ENERGY STAR qualifed clothes washer must have a modifed energy
+        factor (MEF) of 2.0 or greater and a water factor (wf) of 6.0 or less. Rebate
+        is limited to SCE residential customers who are currently using an electric
+        water heater. Proof of purchase must be provided with your application. Limit
+        one ENERGY STAR qualified clothes washer rebate per Installation Address\r\n\r\n"},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"summary":null,"requirements":"-Purchase
+        a new ENERGY STAR qualified clothes washer between January 1, 2013 and December
+        31, 2013. - Make sure the product appears on the list of qualifying products
+        that can be found at www.sce.com/appliances - Install the qualifying clothes
+        washer by February 28, 2014. - The ENERGY STAR qualified clothes washer must
+        have a modified energy factor (MEF) of 2.0 or greater AND a water factor (wf)
+        of 6.0 or less. - Rebate is limited to SCE residential customers who are currently
+        using an electric water heater. - Proof of purchase must be provided with
+        your application. - Limit: One ENERGY STAR qualified clothes washer rebate
+        per Installation Address."},{"incentiveId":3156330,"masterIncentiveId":3156330,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"irrigation","operator":"="}],"tariffCode":"None","incentiveName":"Agricultural
+        Rebates","lseId":1071,"lseName":"San Diego Gas & Electric Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2013-01-01","endDate":null,"isExhausted":false,"projectType":"irrigation","incentiveType":"rebate","rate":44.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"sprinklerToDripIrrigationPerAcre1071","displayName":"Sprinkler
+        to Drip Irrigation","description":"High Pressure Sprinkler to Drip Irrigation,
+        Per Acre \r\n\r\nRequirements: Must convert from a high-pressure, impact-type,
+        sprinkler irrigation system (50 psi operating pressure or more at the sprinkler
+        head) to a micro-irrigation system. Include an Assessor''s Parcel Map or other
+        documentation to verify acreage \r\n\r\nExclusions: Drip tape systems are
+        not eligible Not applicable to new plantings of vineyards or orchards unless
+        a vineyard or orchard was the previous crop on the field"},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"irrigation","operator":"="}],"summary":null,"requirements":"Customers
+        must have a SDG&E commercial electric account if applying for an electric
+        measure. Everything must be installed and operational before a rebate application
+        is submitted. All rebates apply toward the purchase of new or replacement
+        energy-efficient equipment, unless otherwise indicated. Used or rebuilt equipment
+        is not eligible. For item level specifications refer to catalog."},{"incentiveId":3156331,"masterIncentiveId":3156331,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        Appliance Incentives","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2011-11-01","endDate":"2013-05-31","isExhausted":false,"projectType":"majorAppliances","incentiveType":"rebate","rate":25.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"eNERGYSTARRefrigerator","displayName":"Energy
+        Star Refrigerator","description":"ENERGY STAR Refrigerator. \r\n\r\nRequirements:
+        Qualifying refrigerators meet standards based on ENERGY STAR criteria."},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"summary":null,"requirements":"Rebate
+        Eligibility: 1. This application is only for customers who reside in a master-metered,
+        multi-unit facility. 2. Applicant''s building must currently receive electric
+        service from PECO and replace existing electric equipment with qualified equipment
+        to be eligible for incentives. 3. New construction replacement is not eligible.
+        4. Customers must purchase and install qualifying equipment between July 1,
+        2009, and May 31, 2012. 5. Equipment purchases and installations prior to
+        July 1, 2009, do not qualify for an incentive. 6. Additional equipment qualification
+        information can be found at www.peco.com/SmartIdeas, or call 1-888-5-PECO-SAVE
+        (1-888-573-2672)."},{"incentiveId":3156332,"masterIncentiveId":3156332,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"tariffCode":"None","incentiveName":"Water
+        Heating Rebates","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2011-11-01","endDate":"2013-05-31","isExhausted":false,"projectType":"waterHeat","incentiveType":"rebate","rate":25.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"electricWaterHeaterPoint93EnergyFactorOrHigher","displayName":"Electric
+        Water Heater - 0.93 Energy Factor or Higher","description":"Electric Water
+        Heater - 0.93 Energy Factor or Higher\r\n"},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"summary":null,"requirements":"Rebate
+        Eligibility: 1. This application is only for customers who reside in a master-metered,
+        multi-unit facility. 2. Applicant''s building must currently receive electric
+        service from PECO and replace existing electric equipment with qualified equipment
+        to be eligible for incentives. 3. New construction replacement is not eligible.
+        4. Customers must purchase and install qualifying equipment between July 1,
+        2009, and May 31, 2012. 5. Equipment purchases and installations prior to
+        July 1, 2009, do not qualify for an incentive. 6. Additional equipment qualification
+        information can be found at www.peco.com/SmartIdeas, or call 1-888-5-PECO-SAVE
+        (1-888-573-2672)."},{"incentiveId":3156333,"masterIncentiveId":3156333,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        Central Heating & Cooling Rebates","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2011-11-01","endDate":"2013-05-31","isExhausted":false,"projectType":"hvac","incentiveType":"rebate","rate":300.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"eNERGYSTARCentralAC16SEERorHigher","displayName":"ENERGY
+        STAR Central AC - 16 SEER or Higher","description":"ENERGY STAR Central AC
+        - 16 SEER or Higher\r\n"},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"summary":null,"requirements":"To
+        qualify for an incentive, equipment must meet or exceed the requirements outlined
+        on this form. Please refer the incentive document for individual item specifications."},{"incentiveId":3156334,"masterIncentiveId":3156334,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"lighting","operator":"="}],"tariffCode":"None","incentiveName":"Lighting
+        Incentives","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2012-06-01","endDate":"2013-06-01","isExhausted":false,"projectType":"lighting","incentiveType":"rebate","rate":1.500000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"cFLScrewIn30WorLess","displayName":"CFL
+        - Screw-in (30W or Less)","description":"Interior Compact Fluorescent Lamps,
+        Screw-In (Replacing Incandescent): CFL ? Screw-in (30W or Less. Requirements:
+        Screw-in CFLs must replace incandescent existing lamps, and be ENERGY STAR
+        rated lamps or meet ENERGY STAR criteria."},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"lighting","operator":"="}],"summary":null,"requirements":"To
+        qualify for an incentive, equipment must meet or exceed the requirements outlined
+        on this form. Please refer the incentive document for individual item specifications."},{"incentiveId":3156335,"masterIncentiveId":3156335,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"motor","operator":"="}],"tariffCode":"None","incentiveName":"Motors
+        and Drives Incentives","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2012-06-01","endDate":"2013-05-31","isExhausted":false,"projectType":"motor","incentiveType":"rebate","rate":8.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"1HPMotor","displayName":"1HP
+        Motor","description":"Premium Efficiency Motors. Requirements: Incentives
+        are offered for three-phase AC induction motors, from 1 to 250 HP, of open
+        drip-proof (open) and totally enclosed fan-cooled (closed) classifications.  Incentives
+        are based on the motor?s nominal full load efficiencies, tested in accordance
+        with IEEE (Institute of Electrical and Electronics Engineers) Standard 112,
+        method B, that meet or exceed the NEMA premium efficiency standards on the
+        Motor Incentives Worksheet. The application must include the manufacturer''s
+        performance data sheet or nameplate image that shows motor type, motor horsepower,
+        model number, and efficiency rating. Customers should consider matching water
+        or air flows (GPM, CFM) of the existing pump or fan when installing energy-efficient
+        motors that inherently have higher speeds (less slip), which may increase
+        energy savings. Incentive is per motor. Exclusions: Rewound motors do not
+        qualify."},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"motor","operator":"="}],"summary":null,"requirements":"To
+        qualify for an incentive, equipment must meet or exceed the requirements outlined
+        on this form. Please refer the incentive document for individual item specifications."},{"incentiveId":3156336,"masterIncentiveId":3156336,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"airHeat","operator":"="}],"tariffCode":"None","incentiveName":"HVAC
+        Incentives","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2012-06-01","endDate":"2013-06-01","isExhausted":false,"projectType":"hvac","incentiveType":"rebate","rate":35.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"airSourceAirConditionersLessThan5tons","displayName":"Air-Source
+        Air Conditioners < 5.41 tons","description":"Air-Source Air Conditioners.
+        Requirements:  New unitary air conditioning units that meet or exceed the
+        qualifying cooling efficiency shown in the HVAC Incentives Worksheet are eligible
+        for an incentive. They can be either split systems or single package units.
+        The efficiency of split systems is based on an ARI reference number. All packaged
+        and split system cooling equipment must meet Air Conditioning and Refrigeration
+        Institute (ARI) standards (210/240, 320 or 340/360), be UL listed, use a minimum
+        ozone-depleting refrigerant (e.g., HCFC or HFC). All required efficiencies
+        are based on the Consortium for Energy Efficiency (CEE) high-efficiency commercial
+        air conditioning and heat pump specifications (www.cee1.org). A manufacturer''s
+        specification sheet indicating the system efficiency must accompany the application.
+        Disposal of the existing unit must comply with local codes and ordinances."},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"airHeat","operator":"="}],"summary":null,"requirements":"To
+        qualify for an incentive, equipment must meet or exceed the requirements outlined
+        on this form. Please refer the incentive document for individual item specifications."},{"incentiveId":3156337,"masterIncentiveId":3156337,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"manufacturingEquipment","operator":"="}],"tariffCode":"None","incentiveName":"Food
+        Service Incentives","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2012-06-01","endDate":"2013-06-01","isExhausted":false,"projectType":"other","incentiveType":"rebate","rate":100.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"highEfficiencyIceMakers101to200lbs24hrsCapacity","displayName":"High-Efficiency
+        Ice Makers 101-200 lbs/24 hrs. capacity","description":"High-Efficiency Ice
+        Makers 101-200 lbs/24 hrs. capacity - The incentive offering covers ice machines
+        that generate 60 grams (2 oz.) or lighter ice cubes, flaked, crushed, or fragmented
+        ice. Only air-cooled machines qualify (self-contained, ice-making heads, or
+        remote condensing).\r\n"},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"manufacturingEquipment","operator":"="}],"summary":null,"requirements":"To
+        qualify for an incentive, equipment must meet or exceed the requirements outlined
+        on this form. Please refer the incentive document for individual item specifications."},{"incentiveId":3156338,"masterIncentiveId":3156338,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"refrigeration","operator":"="}],"tariffCode":"None","incentiveName":"Refrigeration
+        Incentives","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"GENERAL","startDate":"2012-06-01","endDate":"2013-06-01","isExhausted":false,"projectType":"refrigeration","incentiveType":"rebate","rate":45.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"antiSweatHeaterControls819","displayName":"Anti-Sweat
+        Heater Controls","description":"Anti-Sweat Heater Controls. Requirements:
+        Incentives are offered for devices that sense the relative humidity in the
+        air outside of the display case and cycles or turns off the glass door (if
+        applicable) and frame anti-sweat heaters when the ambient dewpoint is below
+        a preset setpoint. Technologies that can turn off anti-sweat heaters based
+        on sensing condensation (on the inner glass pane) also qualify. Incentive
+        is based on the horizontal linear footage of the case."},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"refrigeration","operator":"="}],"summary":null,"requirements":"To
+        qualify for an incentive, equipment must meet or exceed the requirements outlined
+        on this form. Please refer the incentive document for individual item specifications."},{"incentiveId":3156339,"masterIncentiveId":3156339,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"classSpecialsSector","displayName":"Customer
+        Sector","description":"Subclassification for customer class  Special","requiredValue":"government","operator":"="},{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"lighting","operator":"="}],"tariffCode":"None","incentiveName":"Exterior
+        Lighting Incentives","lseId":819,"lseName":"PECO Energy Co","serviceType":"ELECTRICITY","customerClass":"SPECIAL_USE","startDate":"2012-06-01","endDate":"2013-06-01","isExhausted":false,"projectType":"lighting","incentiveType":"rebate","rate":48.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"lEDtrafficLightsGreen8inchROUND","displayName":"LED
+        traffic lights - Green 8 inch (ROUND)","description":"LED Traffic and Pedestrian
+        Lights. Requirements:  Incentives are offered for LED traffic lights on a
+        per-signal basis (including arrows) that replace or retrofit an existing incandescent
+        traffic signal. Lights must be hard-wired, with the exception of pedestrian
+        hand signals. Exclusions: Incentives are not available for spare lights. "},"quantityKeyCap":null,"state":"PA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"classSpecialsSector","displayName":"Customer
+        Sector","description":"Subclassification for customer class  Special","requiredValue":"government","operator":"="},{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","requiredValue":"lighting","operator":"="}],"summary":null,"requirements":"To
+        qualify for an incentive, equipment must meet or exceed the requirements outlined
+        on this form. Please refer the incentive document for individual item specifications."},{"incentiveId":3156340,"masterIncentiveId":3156340,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        Refrigerator and Freezer Recycling Incentive","lseId":1228,"lseName":"Southern
+        California Edison Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2012-01-01","endDate":"2013-01-01","isExhausted":false,"projectType":"majorAppliances","incentiveType":"rebate","rate":35.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"refrigerator1228","displayName":"Refrigerator
+        (Recycling)","description":"Refrigerator (Recycling)\r\n\r\nRequirements:
+        Recycling inefficient but working refrigerator. Refrigerator must be in working
+        (e.g., cooling) order, between 10 and 32 cu. ft."},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"majorAppliances","operator":"="}],"summary":null,"requirements":"You
+        may qualify if: You are an SCE customer. The appliance is located at your
+        SCE service address. The appliance is in working condition at the time of
+        pick up. The refrigerator or freezer is 10 to 32 cubic feet in size."},{"incentiveId":3156341,"masterIncentiveId":3156341,"eligibility":"COULD_BE_ELIGIBLE","requiredData":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"tariffCode":"None","incentiveName":"Residential
+        Cooling Systems Rebates","lseId":1228,"lseName":"Southern California Edison
+        Co","serviceType":"ELECTRICITY","customerClass":"RESIDENTIAL","startDate":"2013-01-01","endDate":"2014-01-01","isExhausted":false,"projectType":"hvac","incentiveType":"rebate","rate":300.000000,"rateUnit":"COST_PER_UNIT","documents":null,"jurisdiction":"utility","quantityKey":{"keyName":"ductedEvaporativeCoolingSystem1228","displayName":"Ducted
+        Evaporative Cooling System","description":"Ducted Evaporative Cooling System\r\n\r\nRequirements:
+        Make sure the product appears on the list of qualifying products that can
+        be found at www.sce.com/evapcooler. Install the qualifying evaporative cooling
+        system by February 28, 2014. Ducted evaporative coolers must be permanently
+        installed through the wallor on the roof.Ducted evaporative coolers must have
+        UL recognized electrical components. Proof of purchase must be provided with
+        your application. Limit: one of any type of HEER evaporative cooling system
+        rebate per Installation Address.\r\n\r\n\r\nExclusion: Evaporative coolers
+        mountedthrough a window do not qualify for this rebate"},"quantityKeyCap":null,"state":"CA","percentCostCap":null,"percentCostCapKey":{"keyName":null},"paymentCap":null,"paymentDuration":null,"incentivePaidTo":"tenantOrOwner","projectTypeExclusive":null,"applicabilities":[{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","requiredValue":"airHeatCool","operator":"="}],"summary":null,"requirements":"All
+        cooling system equipment/materials must be new. Follow manufacturer installation
+        requirements. Equipment/Materials must meet or exceed all applicable local,
+        state and federal standards, as well as all the following requirements. Provide
+        the information requested for each product installed. Detach and mail in the
+        completed and signed Customer Application Form, copy(ies) of proof(s) of purchase,
+        and other required documentation. An on-site verification of the product(s)
+        purchased and installed may be required before the rebate is paid. For item
+        level specifications refer to catalog."}],"pageStart":0,"pageCount":25}'
+    http_version: 
+  recorded_at: Fri, 15 Apr 2016 22:38:10 GMT
+recorded_with: VCR 3.0.1

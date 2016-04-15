@@ -129,7 +129,7 @@ module Genability
 
       def ruby_to_camel_case(str)
         return nil if str.nil?
-        str.to_s.gsub(/(?:^|_)(.)/){ $1.upcase }.gsub(/^[A-Z]/){ $&.downcase }.to_sym
+        str.to_s.gsub(/(?:^|_)(.)/){ $1.upcase }.gsub(/^[A-Z]/){ $&.downcase }
       end
 
     end
