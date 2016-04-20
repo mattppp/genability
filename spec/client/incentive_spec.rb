@@ -54,6 +54,33 @@ describe Genability::Client, vcr: true do
 
       end
 
+      context ".applicabilities" do
+
+        it "should return an array of applicabilities" do
+          applicabilities = @client.applicabilities
+          applicabilities.should be_an Array
+        end
+
+        it "should allow searches by project_type" do
+          @client.applicabilities(:project_type => "solar_pv").each do |applicability|
+            applicability.project_type.should == "solarPv"
+          end
+        end
+
+        it "should allow searches by incentive_type" do
+          @client.applicabilities(:incentive_type => "rebate").each do |applicability|
+            applicability.incentive_type.should == "rebate"
+          end
+        end
+
+        it "should allow searches by customer_classes" do
+          @client.applicabilities(:customer_classes => 'residential').each do |applicability|
+            applicability.customer_class.should =~ /RESIDENTIAL/
+          end
+        end
+
+      end
+
     end
 
   end

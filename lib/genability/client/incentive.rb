@@ -12,6 +12,12 @@ module Genability
         get("beta/incentives/#{incentive_id}", incentive_params(options)).results.first
       end
 
+      # Returns a list of incentives.
+      def applicabilities(options = {})
+        get("beta/incentives/applicabilities", incentives_params(options)).results
+      end
+
+
       private
 
       def incentives_params(options)
