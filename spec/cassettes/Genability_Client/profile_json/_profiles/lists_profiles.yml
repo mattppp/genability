@@ -5,7 +5,7 @@ http_interactions:
     uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts
     body:
       encoding: UTF-8
-      string: '{"accountName":"Ruby Test"}'
+      string: '{"providerAccountId":"ruby_test_account"}'
     headers:
       Accept:
       - application/json; charset=utf-8
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:20 GMT
+      - Fri, 22 Apr 2016 00:54:16 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -34,16 +34,15 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"dc2ad277-0a08-441d-8564-205bcd880001","providerAccountId":null,"accountName":"Ruby
-        Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7","providerAccountId":"ruby_test_account","accountName":null,"customerOrgId":null,"customerOrgName":null,"address":{"addressString":"94703","city":"Berkeley","state":"CA","zip":"94703","country":"US","lon":-122.2738958,"lat":37.85247409999999},"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:20 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:16 GMT
 - request:
     method: post
     uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles
     body:
       encoding: UTF-8
-      string: '{"accountId":"dc2ad277-0a08-441d-8564-205bcd880001"}'
+      string: '{"accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7"}'
     headers:
       Accept:
       - application/json; charset=utf-8
@@ -61,7 +60,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:20 GMT
+      - Fri, 22 Apr 2016 00:54:16 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -72,12 +71,12 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"8244db1b-f74c-4242-b48f-a78bf8518969","accountId":"dc2ad277-0a08-441d-8564-205bcd880001","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}]}'
+      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"68af7ef8-76df-4285-b555-c2a6bd9a5c18","accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:20 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:17 GMT
 - request:
     method: get
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles?accountId=dc2ad277-0a08-441d-8564-205bcd880001
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles?accountId=0e08dbf1-d45a-4236-88cb-c678446650f7
     body:
       encoding: US-ASCII
       string: ''
@@ -96,7 +95,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:20 GMT
+      - Fri, 22 Apr 2016 00:54:17 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -107,12 +106,13 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"8244db1b-f74c-4242-b48f-a78bf8518969","accountId":"dc2ad277-0a08-441d-8564-205bcd880001","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}],"pageCount":25,"pageStart":0}'
+      string: '{"status":"success","count":2,"type":"UsageProfile","results":[{"profileId":"56d293d019f08fde72d7a628","providerProfileId":"test_profile","profileName":"null
+        Solar Production","accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7","serviceTypes":"SOLAR_PV","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"readingDataSummaries":[{"quantityUnit":"kWh","fromDateTime":"2016-01-01T08:00:00+00:00","toDateTime":"2016-02-01T08:00:00+00:00","numberOfReadings":1}],"baselineMeasures":null},{"profileId":"68af7ef8-76df-4285-b555-c2a6bd9a5c18","accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}],"pageStart":0,"pageCount":25}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:20 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:17 GMT
 - request:
     method: delete
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/8244db1b-f74c-4242-b48f-a78bf8518969
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/68af7ef8-76df-4285-b555-c2a6bd9a5c18
     body:
       encoding: US-ASCII
       string: ''
@@ -131,7 +131,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:20 GMT
+      - Fri, 22 Apr 2016 00:56:35 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -144,5 +144,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"status":"success","count":0,"type":"UsageProfile","results":null}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:20 GMT
+  recorded_at: Fri, 22 Apr 2016 00:56:36 GMT
 recorded_with: VCR 3.0.1

@@ -74,6 +74,82 @@ module Genability
         end.to_h.delete_if{ |k,v| v['dataValue'].nil? }
       end
 
+      def tariff_inputs_params(tariff_inputs)
+        return nil if tariff_inputs.nil?
+        case tariff_inputs
+        when Hash
+          [convert_tariff_input(tariff_inputs)]
+        when Array
+          tariff_inputs.map{|t| convert_tariff_input(t)}
+        else
+          raise Genability::InvalidInput
+        end
+      end
+
+      def convert_tariff_input(options)
+        {
+          "scenarios" => options[:scenarios],
+          "fromDateTime" => format_to_iso8601(options[:from] || options[:from_date_time]),
+          "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
+          "keyName" => ruby_to_camel_case(options[:key_name]),
+          "dataValue" => options[:data_value],
+          "dataType" => convert_to_upcase(options[:data_type]),
+          "dataFactor" => options[:data_factor],
+          "unit" => options[:unit]
+        }.
+        delete_if{ |k,v| v.nil? }
+      end
+
+      def rate_inputs_params(rate_inputs)
+        return nil if rate_inputs.nil?
+        case rate_inputs
+        when Hash
+          [convert_rate_input(rate_inputs)]
+        when Array
+          rate_inputs.map{|p| convert_rate_input(p)}
+        else
+          raise Genability::InvalidInput
+        end
+      end
+
+      def convert_rate_input(options)
+        {
+          "scenarios" => options[:scenarios],
+          "fromDateTime" => format_to_iso8601(options[:from] || options[:from_date_time]),
+          "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
+          "chargeType" => convert_to_upcase(options[:charge_type]),
+          "rateGroupName" => options[:rate_group_name],
+          "rateName" => options[:rate_name],
+          "rateBands" => rate_bands_params(options[:rate_bands])
+        }.
+        delete_if{ |k,v| v.nil? }
+      end
+
+      def rate_bands_params(rate_bands)
+        return nil if rate_bands.nil?
+        case rate_bands
+        when Hash
+          [convert_rate_band(rate_bands)]
+        when Array
+          rate_bands.map{|r| convert_rate_band(r)}
+        else
+          raise Genability::InvalidInput
+        end
+      end
+
+      def convert_rate_band(options)
+        {
+          "rateAmount" => options[:rate_amount],
+          "rateUnit" => convert_to_upcase(options[:rate_unit])
+        }.
+        delete_if{ |k,v| v.nil? }
+      end
+
+      def convert_to_upcase(value = nil)
+        return nil if value.nil? || value.to_s.nil?
+        value.to_s.upcase
+      end
+
       def convert_to_boolean(value = nil)
         return value if !value.is_a?(String)
         return nil if value.nil? || value.empty?

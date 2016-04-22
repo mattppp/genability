@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 21:15:16 GMT
+      - Fri, 22 Apr 2016 00:57:06 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -34,10 +34,10 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"17a407ef-277e-43ae-b51e-7b488048238e","providerAccountId":null,"accountName":"Ruby
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"4cb27d92-3e17-49b3-b57d-4b43522b6ec2","providerAccountId":null,"accountName":"Ruby
         Accounts Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 21:15:18 GMT
+  recorded_at: Fri, 22 Apr 2016 00:57:07 GMT
 - request:
     method: get
     uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts?search=Ruby%20Accounts%20Test
@@ -59,24 +59,24 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 21:15:17 GMT
+      - Fri, 22 Apr 2016 00:57:06 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
       - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '245'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"17a407ef-277e-43ae-b51e-7b488048238e","providerAccountId":null,"accountName":"Ruby
-        Accounts Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}],"pageCount":25,"pageStart":0}'
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"4cb27d92-3e17-49b3-b57d-4b43522b6ec2","providerAccountId":null,"accountName":"Ruby
+        Accounts Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}],"pageStart":0,"pageCount":25}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 21:15:18 GMT
+  recorded_at: Fri, 22 Apr 2016 00:57:07 GMT
 - request:
     method: delete
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/17a407ef-277e-43ae-b51e-7b488048238e
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/4cb27d92-3e17-49b3-b57d-4b43522b6ec2
     body:
       encoding: US-ASCII
       string: ''
@@ -95,18 +95,18 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 21:15:17 GMT
+      - Fri, 22 Apr 2016 00:57:06 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '212'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"17a407ef-277e-43ae-b51e-7b488048238e","providerAccountId":null,"accountName":null,"customerOrgId":null,"customerOrgName":null,"status":"DELETED","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"4cb27d92-3e17-49b3-b57d-4b43522b6ec2","providerAccountId":null,"accountName":null,"customerOrgId":null,"customerOrgName":null,"status":"DELETED","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 21:15:20 GMT
+  recorded_at: Fri, 22 Apr 2016 00:57:07 GMT
 recorded_with: VCR 3.0.1

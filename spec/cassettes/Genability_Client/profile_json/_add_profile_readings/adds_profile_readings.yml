@@ -5,7 +5,7 @@ http_interactions:
     uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts
     body:
       encoding: UTF-8
-      string: '{"accountName":"Ruby Test"}'
+      string: '{"providerAccountId":"ruby_test_account"}'
     headers:
       Accept:
       - application/json; charset=utf-8
@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:21 GMT
+      - Fri, 22 Apr 2016 00:54:17 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -34,16 +34,15 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"137a3c33-8868-48ce-bedd-ff42b7e29177","providerAccountId":null,"accountName":"Ruby
-        Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7","providerAccountId":"ruby_test_account","accountName":null,"customerOrgId":null,"customerOrgName":null,"address":{"addressString":"94703","city":"Berkeley","state":"CA","zip":"94703","country":"US","lon":-122.2738958,"lat":37.85247409999999},"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:22 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:17 GMT
 - request:
     method: post
     uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles
     body:
       encoding: UTF-8
-      string: '{"accountId":"137a3c33-8868-48ce-bedd-ff42b7e29177"}'
+      string: '{"accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7"}'
     headers:
       Accept:
       - application/json; charset=utf-8
@@ -61,7 +60,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:21 GMT
+      - Fri, 22 Apr 2016 00:54:17 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -72,12 +71,12 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"6a4fd79c-a870-4c3e-8fac-a8f4311ddc71","accountId":"137a3c33-8868-48ce-bedd-ff42b7e29177","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"baselineMeasures":null}]}'
+      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"8533bacb-3a85-470a-8e09-df8ee0fc01d8","accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"dataStatus":2,"properties":null,"baselineMeasures":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:22 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:17 GMT
 - request:
     method: post
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/6a4fd79c-a870-4c3e-8fac-a8f4311ddc71/readings
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/8533bacb-3a85-470a-8e09-df8ee0fc01d8/readings
     body:
       encoding: UTF-8
       string: '{"readings":[{"fromDateTime":"2011-08-01T22:30:00.0-0700","toDateTime":"2011-08-01T22:45:00.0-0700","quantityUnit":"kWh","quantityValue":220}]}'
@@ -98,23 +97,23 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:23 GMT
+      - Fri, 22 Apr 2016 00:54:17 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '89'
+      - '94'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: '{"status":"success","count":0,"type":"ReadingData","results":null}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:24 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:17 GMT
 - request:
     method: get
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/6a4fd79c-a870-4c3e-8fac-a8f4311ddc71?groupBy=month
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/8533bacb-3a85-470a-8e09-df8ee0fc01d8?groupBy=MONTH
     body:
       encoding: US-ASCII
       string: ''
@@ -133,7 +132,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:24 GMT
+      - Fri, 22 Apr 2016 00:54:17 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -144,12 +143,12 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"6a4fd79c-a870-4c3e-8fac-a8f4311ddc71","accountId":"137a3c33-8868-48ce-bedd-ff42b7e29177","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"isDefault":true,"dataStatus":2,"properties":null,"readingDataSummaries":[{"quantityUnit":"kWh","fromDateTime":"2011-08-02T05:30:00+00:00","toDateTime":"2011-08-02T05:45:00+00:00","numberOfReadings":1}],"readings":{"totalCount":1,"pageCount":0,"pageStart":0},"intervals":{"totalCount":1,"pageCount":25,"pageStart":0,"list":[{"fromDateTime":"2011-08-02T05:30:00+00:00","toDateTime":"2011-08-02T05:45:00+00:00","duration":900000,"kWh":{"quantityAmount":220.0,"rateAmount":0}}]},"baselineMeasures":null}]}'
+      string: '{"status":"success","count":1,"type":"UsageProfile","results":[{"profileId":"8533bacb-3a85-470a-8e09-df8ee0fc01d8","accountId":"0e08dbf1-d45a-4236-88cb-c678446650f7","serviceTypes":"ELECTRICITY","source":{"sourceId":"ReadingEntry","name":null,"type":"Reading","sourceVersion":null},"dataStatus":2,"properties":null,"readingDataSummaries":[{"quantityUnit":"kWh","fromDateTime":"2011-08-02T05:30:00+00:00","toDateTime":"2011-08-02T05:45:00+00:00","numberOfReadings":1}],"readings":{"totalCount":1,"pageCount":0,"pageStart":0},"intervals":{"totalCount":1,"pageCount":25,"pageStart":0,"list":[{"fromDateTime":"2011-08-01T00:00:00+00:00","toDateTime":"2011-09-01T00:00:00+00:00","duration":2678400000,"kWh":{"quantityAmount":220.0,"rateAmount":0},"kW":{"quantityAmount":880.0,"rateAmount":0}}]},"baselineMeasures":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:24 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:17 GMT
 - request:
     method: delete
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/6a4fd79c-a870-4c3e-8fac-a8f4311ddc71
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/profiles/8533bacb-3a85-470a-8e09-df8ee0fc01d8
     body:
       encoding: US-ASCII
       string: ''
@@ -168,7 +167,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 23:07:24 GMT
+      - Fri, 22 Apr 2016 00:54:17 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -181,5 +180,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"status":"success","count":0,"type":"UsageProfile","results":null}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 23:07:25 GMT
+  recorded_at: Fri, 22 Apr 2016 00:54:17 GMT
 recorded_with: VCR 3.0.1

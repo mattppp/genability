@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/beta/incentives/applicabilities?projectType=solarPv
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 22 Apr 2016 00:57:25 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":20,"type":"IncentiveApplicability","results":[{"applicabilityKey":"annualConsumption","displayName":"Annual
+        Consumption ","description":"Annual Consumption by customer","quantityUnit":"kWh"},{"applicabilityKey":"annualEstimatedSolarProduction","displayName":"Annual
+        Estimated Solar Production","description":"How many kWh the solar system is
+        estimated to produce in the first year. ","quantityUnit":"kWh"},{"applicabilityKey":"azimuth","displayName":"Azimuth","description":"Azimuth
+        angle (degrees)."},{"applicabilityKey":"cpsLocalContractor","displayName":"CPS
+        Local Contractor","description":"Is the installer a CPS Energy approved local
+        contractor."},{"applicabilityKey":"isConEdCustomer","displayName":"Consolidated
+        Edison Customer","description":"Is the applicant a Consolidated Edison customer?"},{"applicabilityKey":"isLowIncome","displayName":"Low
+        Income Customer","description":"Is the customer considered low income by the
+        LSE. "},{"applicabilityKey":"isPacificPowerCustomer","displayName":"Pacific
+        Power Customer","description":"Is the applicant a Pacific Power customer?"},{"applicabilityKey":"isPgeCustomer","displayName":"Portland
+        General Electric Customer","description":"Is the applicant a Portland General
+        Electric customer?"},{"applicabilityKey":"recRetained","displayName":"REC
+        Retained","description":"Whether the owner has chosen to retain their REC
+        (Renewable Energy Credits).  "},{"applicabilityKey":"rmldLocalContractorAndManufacturer","displayName":"RMLD
+        Local Contractor and Manufacturer","description":"Is the system installer
+        and parts manufacturer a Reading Municipal Light Department approved local
+        business."},{"applicabilityKey":"systemCost","displayName":"System Cost","description":"Cost
+        of the solar system in USD. ","quantityUnit":"USD"},{"applicabilityKey":"systemOwnership","displayName":"System
+        Ownership","description":"If incentive requires the system to be owned by
+        the Host or Third Party to qualify.  ","choices":[{"displayValue":"Host","value":"host","dataValue":"host","likelihood":null},{"displayValue":"Third
+        Party","value":"thirdParty","dataValue":"thirdParty","likelihood":null}]},{"applicabilityKey":"systemSize","displayName":"System
+        Size","description":"Nameplate capacity (kW).","quantityUnit":"kW"},{"applicabilityKey":"systemSizeAc","displayName":"System
+        Size AC","description":"Nameplate capacity (kW) times inverter efficiency","quantityUnit":"kW"},{"applicabilityKey":"systemSizeAcW","displayName":"System
+        Size AC W","description":"Size of the solar system in Watts AC","quantityUnit":"W"},{"applicabilityKey":"systemSizeDc","displayName":"System
+        Size DC","description":"Size of the solar system in kiloWatts DC","quantityUnit":"kW"},{"applicabilityKey":"systemSizeDcW","displayName":"System
+        Size DC W","description":"Size of the solar system in Watts DC","quantityUnit":"W"},{"applicabilityKey":"taxType","displayName":"Tax
+        Type","description":"Tax categories","choices":[{"displayValue":"Income Tax","value":"Income
+        Tax","dataValue":"Income Tax","likelihood":null},{"displayValue":"Property
+        Tax","value":"Property Tax","dataValue":"Property Tax","likelihood":null},{"displayValue":"Sales
+        Tax","value":"Sales Tax","dataValue":"Sales Tax","likelihood":null}]},{"applicabilityKey":"tilt","displayName":"Tilt","description":"Tilt
+        angle in degrees of the PV (degrees)."},{"applicabilityKey":"uSAComponents","displayName":"USA
+        Made Components","description":"Whether the system''s photovoltaic panels
+        or inverter are made in the USA.  "}],"pageStart":0,"pageCount":25}'
+    http_version: 
+  recorded_at: Fri, 22 Apr 2016 00:57:25 GMT
+recorded_with: VCR 3.0.1

@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 21:15:18 GMT
+      - Fri, 22 Apr 2016 00:57:06 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -34,13 +34,13 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"cf7314be-db18-450a-acb9-9f843f4c2bf0","providerAccountId":null,"accountName":"Ruby
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"45c99e4a-d611-404c-9911-d661b644bdff","providerAccountId":null,"accountName":"Ruby
         Account Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 21:15:20 GMT
+  recorded_at: Fri, 22 Apr 2016 00:57:07 GMT
 - request:
     method: get
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/cf7314be-db18-450a-acb9-9f843f4c2bf0
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/45c99e4a-d611-404c-9911-d661b644bdff
     body:
       encoding: US-ASCII
       string: ''
@@ -59,7 +59,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 21:15:19 GMT
+      - Fri, 22 Apr 2016 00:57:06 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -70,13 +70,13 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"cf7314be-db18-450a-acb9-9f843f4c2bf0","providerAccountId":null,"accountName":"Ruby
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"45c99e4a-d611-404c-9911-d661b644bdff","providerAccountId":null,"accountName":"Ruby
         Account Test","customerOrgId":null,"customerOrgName":null,"status":"ACTIVE","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 21:15:21 GMT
+  recorded_at: Fri, 22 Apr 2016 00:57:07 GMT
 - request:
     method: delete
-    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/cf7314be-db18-450a-acb9-9f843f4c2bf0
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/45c99e4a-d611-404c-9911-d661b644bdff
     body:
       encoding: US-ASCII
       string: ''
@@ -95,7 +95,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Sat, 27 Feb 2016 21:15:20 GMT
+      - Fri, 22 Apr 2016 00:57:06 GMT
       Server:
       - Apache-Coyote/1.1
       Vary:
@@ -106,7 +106,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"cf7314be-db18-450a-acb9-9f843f4c2bf0","providerAccountId":null,"accountName":null,"customerOrgId":null,"customerOrgName":null,"status":"DELETED","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"45c99e4a-d611-404c-9911-d661b644bdff","providerAccountId":null,"accountName":null,"customerOrgId":null,"customerOrgName":null,"status":"DELETED","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
     http_version: 
-  recorded_at: Sat, 27 Feb 2016 21:15:23 GMT
+  recorded_at: Fri, 22 Apr 2016 00:57:07 GMT
 recorded_with: VCR 3.0.1

@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/calculate/512
+    body:
+      encoding: UTF-8
+      string: '{"fromDateTime":"2016-01-01T00:00:00.0-0800","toDateTime":"2016-01-01T01:00:00.0-0800","tariffInputs":[{"fromDateTime":"2016-01-01T00:00:00.0-0800","toDateTime":"2016-01-01T00:15:00.0-0800","keyName":"consumption","dataValue":2.2,"unit":"kWh"},{"fromDateTime":"2016-01-01T00:15:00.0-0800","toDateTime":"2016-01-01T00:30:00.0-0800","keyName":"consumption","dataValue":1.3,"unit":"kWh"},{"fromDateTime":"2016-01-01T00:30:00.0-0800","toDateTime":"2016-01-01T00:45:00.0-0800","keyName":"consumption","dataValue":0.6,"unit":"kWh"},{"fromDateTime":"2016-01-01T00:45:00.0-0800","toDateTime":"2016-01-01T01:00:00.0-0800","keyName":"consumption","dataValue":2.1,"unit":"kWh"},{"fromDateTime":"2016-01-01T00:00:00.0-0800","toDateTime":"2016-01-01T01:00:00.0-0800","keyName":"cityLimits","dataValue":"Inside"},{"fromDateTime":"2016-01-01T00:00:00.0-0800","toDateTime":"2016-01-01T01:00:00.0-0800","keyName":"connectionType","dataValue":"Primary"}],"rateInputs":[{"fromDateTime":"2016-01-01T12:00:00.0-0800","toDateTime":"2016-01-02T12:00:00.0-0800","chargeType":"TAX","rateGroupName":"Taxes","rateName":"Utility
+        Users Tax","rateBands":[{"rateAmount":0.075,"rateUnit":"PERCENTAGE"}]}]}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 22 Apr 2016 00:57:39 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1180'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"CalculatedCost","results":[{"masterTariffId":512,"tariffName":"Residential","totalCost":0.59000000,"fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","currency":"USD","summary":{"subTotalCost":0.59,"taxCost":0.00,"totalCost":0.59,"adjustedTotalCost":0.59,"kWh":6.20,"kW":0},"accuracy":1.00000000,"items":[{"tariffRateId":17471831,"tariffRateBandId":10922532,"rateSequenceNumber":0,"rateGroupName":"Basic
+        Service Charge","rateName":"Basic Service Charge","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"fixed","rateType":"COST_PER_UNIT","rateAmount":0.01344086,"itemQuantity":1.00000000,"cost":0.01344086},{"tariffRateId":17471832,"tariffRateBandId":10922533,"rateSequenceNumber":1,"rateGroupName":"Environmental
+        Compliance Cost Recovery Charge","rateName":"Basic Service Charge Component","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"fixed","rateType":"COST_PER_UNIT","rateAmount":0.00171613,"itemQuantity":1.00000000,"cost":0.00171613},{"tariffRateId":17471833,"tariffRateBandId":10922534,"rateSequenceNumber":2,"rateGroupName":"Nuclear
+        Construction Cost Recovery Charge","rateName":"Basic Service Charge Component","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"fixed","rateType":"COST_PER_UNIT","rateAmount":0.00130856,"itemQuantity":1.00000000,"cost":0.00130856},{"tariffRateId":17471834,"tariffRateBandId":10922535,"rateSequenceNumber":3,"rateGroupName":"Demand
+        Side Management Charge","rateName":"Basic Service Charge Component","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"fixed","rateType":"COST_PER_UNIT","rateAmount":0.00022474,"itemQuantity":1.00000000,"cost":0.00022474},{"tariffRateId":17471836,"tariffRateBandId":10922539,"rateSequenceNumber":5,"rateGroupName":"Demand
+        Side Management Charge","rateName":"Energy Charge - Winter Component","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"consumption","rateType":"COST_PER_UNIT","rateAmount":0.00081880,"itemQuantity":6.20000000,"cost":0.00507656},{"tariffRateId":17471837,"tariffRateBandId":10922542,"rateSequenceNumber":6,"rateGroupName":"Energy
+        Charges","rateName":"Winter Rate","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"consumption","rateType":"COST_PER_UNIT","rateAmount":0.04896858,"itemQuantity":6.20000000,"cost":0.30360520},{"tariffRateId":17471838,"tariffRateBandId":10922545,"rateSequenceNumber":7,"rateGroupName":"Environmental
+        Compliance Cost Recovery Charge","rateName":"Energy Charge - Winter Component","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"consumption","rateType":"COST_PER_UNIT","rateAmount":0.00625231,"itemQuantity":6.20000000,"cost":0.03876432},{"tariffRateId":17471848,"tariffRateBandId":10922565,"rateSequenceNumber":8,"rateGroupName":"Municipal
+        Franchise Fee","rateName":"Inside City Limit Customer","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"percentage","rateType":"PERCENTAGE","rateAmount":2.99890000,"itemQuantity":1.00000000,"cost":0.01716376},{"tariffRateId":17471839,"tariffRateBandId":10922548,"rateSequenceNumber":8,"rateGroupName":"Nuclear
+        Construction Cost Recovery Charge","rateName":"Energy Charge - Winter Component","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"consumption","rateType":"COST_PER_UNIT","rateAmount":0.00476743,"itemQuantity":6.20000000,"cost":0.02955807},{"tariffRateId":17471840,"tariffRateBandId":10922549,"rateSequenceNumber":9,"rateGroupName":"Fuel
+        Cost Recovery Charge","rateName":"Winter Rate","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","quantityKey":"consumption","rateType":"COST_PER_UNIT","rateAmount":0.02881300,"itemQuantity":6.20000000,"cost":0.17864060}],"assumptions":[{"keyName":"tariffId","dataType":"INTEGER","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","dataValue":"3244437"},{"keyName":"isLowIncomeSeniorCitizen953","displayName":"Is
+        Low Income Senior Citizen","description":"Customers who are at least 62 years
+        of age or older or be a disabled person as evidenced by receiving Supplemental
+        Security Income (SSI) or State Supplemental Payment (SSP) and whose total
+        gross annual income for all persons in the applicant''s household may not
+        exceed seventy-five (75) percent of the most recent median income levels.","dataType":"BOOLEAN","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","dataValue":"false","accuracy":80},{"keyName":"cityLimits","displayName":"Service
+        Area (Inside/outside city limits)","description":"Has service inside or outside
+        city limits","dataType":"STRING","fromDateTime":"2016-01-01T03:00:00-05:00","toDateTime":"2016-01-01T04:00:00-05:00","dataValue":"Inside","accuracy":100}]}]}'
+    http_version: 
+  recorded_at: Fri, 22 Apr 2016 00:57:39 GMT
+recorded_with: VCR 3.0.1

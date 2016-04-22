@@ -77,7 +77,7 @@ module Genability
           "properties" => properties_params(options[:properties]),
           "readingData" => readings_params(options[:reading_data]),
           "baselineMeasures" => baseline_measures_params(options[:baseline_measures]),
-          "groupBy" => options[:group_by].andand.to_s.andand.upcase
+          "groupBy" => convert_to_upcase(options[:group_by])
         }.
         delete_if{ |k,v| v.nil? }
       end
@@ -88,7 +88,7 @@ module Genability
           "profileName" => options[:profile_name],
           "serviceTypes" => multi_option_handler(options[:service_types]),
           "isDefault" => convert_to_boolean(options[:is_default]),
-          "groupBy" => options[:group_by].andand.to_s.andand.upcase,
+          "groupBy" => convert_to_upcase(options[:group_by]),
           "populateIntervals" => convert_to_boolean(options[:populate_intervals])
         }.
         delete_if{ |k,v| v.nil? }.
@@ -103,7 +103,7 @@ module Genability
           "populateReadings" => convert_to_boolean(options[:populate_readings]),
           "populateIntervals" => convert_to_boolean(options[:populate_intervals]),
           "populateBaseline" => convert_to_boolean(options[:populate_baseline]),
-          "groupBy" => options[:group_by].andand.to_s.andand.upcase,
+          "groupBy" => convert_to_upcase(options[:group_by]),
           "clipBy" => options[:clip_by],
           "fields" => options[:fields]
         }.

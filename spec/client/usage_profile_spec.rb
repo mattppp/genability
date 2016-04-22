@@ -64,7 +64,7 @@ describe Genability::Client, vcr: true do
         it "lists profiles" do
           @account = @client.upsert_account(:provider_account_id => 'ruby_test_account')
           @profile = @client.add_profile(:account_id => @account.account_id)
-          @client.profiles(:account_id => @account.account_id).count.should == 1
+          @client.profiles(:account_id => @account.account_id).count.should >= 1
           @client.delete_profile(@profile.profile_id)
         end
 
