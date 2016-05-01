@@ -3,18 +3,9 @@ module Genability
     # Tariffs are rate plans for electricity. They describe who the plan applies
     # to (service and applicability), what the charges are, and other information
     # about this electricity service:
-    #
-    #   1. We have residential tariffs currently. General tariffs (commercial &
-    #      industrial and speciality tariffs) are coming soon.
-    #   2. You can specify whether you want the tariff fully populated, or whether
-    #      you just want a sub section of the data (to avoid charges and to speed
-    #      up your queries).
     module Tariff
       # Returns a list of tariffs.
       #
-      # @format :json
-      # @authenticated true
-      # @rate_limited true
       # @param options [Hash] A customizable set of options.
       # @option options [Integer] :lse_id Filter tariffs for a specific Load Serving
       #   Entity. (Optional)
@@ -83,9 +74,6 @@ module Genability
 
       # Returns one tariff.
       #
-      # @format :json
-      # @authenticated true
-      # @rate_limited true
       # @param tariff_id [Integer] Unique Genability ID (primary key) for a tariff.
       # @param options [Hash] A customizable set of options.
       # @option options [Boolean] :populate_rates Populates the rate details for the
@@ -105,13 +93,20 @@ module Genability
       def tariffs_params(options)
         {
           'lseId' => options[:lse_id],
-          'effectiveOn' => format_to_iso8601(options[:effective_on]),
+          'openOn' => format_to_iso8601(options[:open_on]),
           'fromDateTime' => format_to_iso8601(options[:from] || options[:from_date_time]),
           'toDateTime' => format_to_iso8601(options[:to] || options[:to_date_time]),
           'customerClasses' => multi_option_handler(options[:customer_classes]),
           'tariffTypes' => multi_option_handler(options[:tariff_types]),
+          'serviceTypes' => multi_option_handler(options[:service_types]),
+          'privacyFlags' => multi_option_handler(options[:privacy_flags]),
+          'addressString' => options[:address_string],
           'zipCode' => options[:zip_code],
-          'accountId' => options[:account_id]
+          'country' => options[:country],
+          'accountId' => options[:account_id],
+          'consumption' => options[:consumption],
+          'demand' => options[:demand],
+          'hasNetMetering' => convert_to_boolean(options[:has_net_metering]),
         }.delete_if{ |k,v| v.nil? }.
           merge( tariff_params(options) ).
           merge( search_params(options) ).
@@ -121,7 +116,13 @@ module Genability
       def tariff_params(options)
         {
           'populateRates' => convert_to_boolean(options[:populate_rates]),
-          'populateProperties' => convert_to_boolean(options[:populate_properties])
+          'populateProperties' => convert_to_boolean(options[:populate_properties]),
+          'populateDocuments' => convert_to_boolean(options[:populate_documents]),
+          'effectiveOn' => format_to_iso8601(options[:effective_on]),
+          'territoryId' => options[:territory_id],
+          'bundleRates' => convert_to_boolean(options[:bundle_rates]),
+          'applicableRateOnly' => convert_to_boolean(options[:applicable_rate_only]),
+          'lookupVariableRates' => convert_to_boolean(options[:lookup_variable_rates])
         }.delete_if{ |k,v| v.nil? }
       end
 
