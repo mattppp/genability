@@ -106,7 +106,7 @@ module Genability
           'accountId' => options[:account_id],
           'consumption' => options[:consumption],
           'demand' => options[:demand],
-          'hasNetMetering' => convert_to_boolean(options[:has_net_metering]),
+          'hasNetMetering' => convert_to_boolean(options[:has_net_metering])
         }.delete_if{ |k,v| v.nil? }.
           merge( tariff_params(options) ).
           merge( search_params(options) ).
@@ -122,7 +122,8 @@ module Genability
           'territoryId' => options[:territory_id],
           'bundleRates' => convert_to_boolean(options[:bundle_rates]),
           'applicableRateOnly' => convert_to_boolean(options[:applicable_rate_only]),
-          'lookupVariableRates' => convert_to_boolean(options[:lookup_variable_rates])
+          'lookupVariableRates' => convert_to_boolean(options[:lookup_variable_rates]),
+          'fields' => options[:fields]
         }.delete_if{ |k,v| v.nil? }
       end
 
