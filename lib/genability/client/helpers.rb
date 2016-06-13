@@ -118,8 +118,10 @@ module Genability
           "fromDateTime" => format_to_iso8601(options[:from] || options[:from_date_time]),
           "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
           "chargeType" => convert_to_upcase(options[:charge_type]),
-          "rateGroupName" => options[:rate_group_name],
+          "chargeClass" => convert_to_upcase(options[:charge_class]),
+          "tariffBookRateName" => options[:tariff_book_rate_name],
           "rateName" => options[:rate_name],
+          "rateGroupName" => options[:rate_group_name],
           "rateBands" => rate_bands_params(options[:rate_bands])
         }.
         delete_if{ |k,v| v.nil? }
@@ -140,7 +142,9 @@ module Genability
       def convert_rate_band(options)
         {
           "rateAmount" => options[:rate_amount],
-          "rateUnit" => convert_to_upcase(options[:rate_unit])
+          "rateUnit" => convert_to_upcase(options[:rate_unit]),
+          "hasConsumptionLimit" => convert_to_boolean(options[:has_consumption_limit]),
+          "isCredit" => convert_to_boolean(options[:is_credit])
         }.
         delete_if{ |k,v| v.nil? }
       end
