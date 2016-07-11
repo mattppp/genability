@@ -43,7 +43,13 @@ module Genability
           end
         end
       end
-      raw ? response : response.body
+      if raw
+        response
+      elsif response && response.body && !response.body.is_a?(String)
+        response.body
+      else
+        raise Genability::InvalidResponseFormat, "Invalid response format: #{response && response.body}"
+      end
     end
 
     def formatted_path(path)

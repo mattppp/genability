@@ -20,6 +20,9 @@ module Genability
   # Raised when Genability returns the HTTP status code 503
   class ServiceUnavailable < Error; end
 
+  # Raised when Genability returns an ill-formatted response body
+  class InvalidResponseFormat < Error; end
+
   # Raised when the tariff input for the calculate method is
   # not an array or hash
   class InvalidInput < Error; end
