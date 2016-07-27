@@ -95,7 +95,8 @@ module Genability
           "dataValue" => options[:data_value],
           "dataType" => convert_to_upcase(options[:data_type]),
           "dataFactor" => options[:data_factor],
-          "unit" => options[:unit]
+          "unit" => options[:unit],
+          "operator" => options[:operator]
         }.
         delete_if{ |k,v| v.nil? }
       end
