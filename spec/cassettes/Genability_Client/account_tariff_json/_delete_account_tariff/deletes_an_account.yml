@@ -1,0 +1,149 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts
+    body:
+      encoding: UTF-8
+      string: '{"providerAccountId":"account_test"}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 15 Feb 2017 18:34:40 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"16d2efd6-0aaa-4c4e-b03c-c867736054f4","providerAccountId":"account_test","accountName":"Ruby
+        Provider Account Test","customerOrgId":null,"customerOrgName":null,"status":"DELETED","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+    http_version: 
+  recorded_at: Wed, 15 Feb 2017 18:34:41 GMT
+- request:
+    method: put
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/16d2efd6-0aaa-4c4e-b03c-c867736054f4/tariffs
+    body:
+      encoding: UTF-8
+      string: '{"masterTariffId":522}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Content-Type:
+      - application/json;charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 15 Feb 2017 18:36:05 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"Tariff","results":[{"masterTariffId":522,"tariffCode":"E-1","tariffName":"Residential","lseId":734,"lseName":"Pacific
+        Gas & Electric Co","customerClass":null,"customerLikelihood":null,"endDate":null,"timeZone":"America/Los_Angeles","billingPeriod":"MONTHLY","currency":"USD"}]}'
+    http_version: 
+  recorded_at: Wed, 15 Feb 2017 18:36:06 GMT
+- request:
+    method: delete
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/16d2efd6-0aaa-4c4e-b03c-c867736054f4/tariffs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 15 Feb 2017 18:37:09 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":0,"type":"Tariff","results":null}'
+    http_version: 
+  recorded_at: Wed, 15 Feb 2017 18:37:10 GMT
+- request:
+    method: delete
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/accounts/16d2efd6-0aaa-4c4e-b03c-c867736054f4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 15 Feb 2017 18:37:10 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '217'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"Account","results":[{"accountId":"16d2efd6-0aaa-4c4e-b03c-c867736054f4","providerAccountId":null,"accountName":null,"customerOrgId":null,"customerOrgName":null,"status":"DELETED","type":null,"accountManager":null,"assignee":null,"contacts":null,"properties":null,"tariffs":null,"projects":null}]}'
+    http_version: 
+  recorded_at: Wed, 15 Feb 2017 18:37:10 GMT
+recorded_with: VCR 3.0.1

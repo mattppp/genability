@@ -146,7 +146,8 @@ module Genability
           "fromDateTime" => format_to_iso8601(options[:from] || options[:from_date_time]),
           "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
           "quantityUnit" => options[:quantity_unit],
-          "quantityValue" => options[:quantity_value]
+          "quantityValue" => options[:quantity_value],
+          "touType" => convert_to_upcase(options[:tou_type])
         }.
         delete_if{ |k,v| v.nil? }
       end

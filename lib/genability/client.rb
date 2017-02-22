@@ -3,6 +3,7 @@ module Genability
   class Client < API
     require 'genability/client/helpers'
     require 'genability/client/account'
+    require 'genability/client/account_tariff'
     require 'genability/client/calculate'
     require 'genability/client/echo'
     require 'genability/client/incentive'
@@ -20,6 +21,7 @@ module Genability
     include Genability::Client::Helpers
 
     include Genability::Client::Account
+    include Genability::Client::AccountTariff
     include Genability::Client::Calculate
     include Genability::Client::Echo
     include Genability::Client::Incentive
