@@ -37,6 +37,7 @@ Gemfile.lock
 # For MacOS:
 #
 #.DS_Store
+.idea
 
 # For TextMate
 #*.tmproj
