@@ -73,7 +73,7 @@ module Genability
       end
 
       def account_tariffs(provider_account_id)
-        get("accounts/pid/#{provider_account_id}/tariffs").results
+        get("v1/accounts/pid/#{provider_account_id}/tariffs").results
       end
 
       # Returns one tariff.
