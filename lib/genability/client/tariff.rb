@@ -72,6 +72,10 @@ module Genability
         get("public/tariffs", tariffs_params(options)).results
       end
 
+      def account_tariffs(provider_account_id)
+        get("accounts/pid/#{provider_account_id}/tariffs").results
+      end
+
       # Returns one tariff.
       #
       # @param tariff_id [Integer] Unique Genability ID (primary key) for a tariff.
