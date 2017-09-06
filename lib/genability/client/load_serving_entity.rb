@@ -76,6 +76,10 @@ module Genability
 
       alias :lses :load_serving_entities
 
+      def simple_lse(options={})
+        get("public/lses", options).results
+      end
+
       # Returns details for a single load serving entity
       #
       # @format :json
