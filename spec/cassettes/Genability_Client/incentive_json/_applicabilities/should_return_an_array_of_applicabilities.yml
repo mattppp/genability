@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/beta/incentives/applicabilities
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 22 Apr 2016 00:57:25 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":37,"type":"IncentiveApplicability","results":[{"applicabilityKey":"10YearOldRefrigerator","displayName":"Has
+        10 Year Old Refrigerator (14-15 cu.ft.)","description":"Has 10 Year Old Refrigerator
+        (14-15 cu.ft.)?"},{"applicabilityKey":"annualConsumption","displayName":"Annual
+        Consumption ","description":"Annual Consumption by customer","quantityUnit":"kWh"},{"applicabilityKey":"annualDemand","displayName":"Annual
+        Demand","description":"Quantity in kW of load that is used in the maximum
+        15-minute kW delivery during each month, for 12 months."},{"applicabilityKey":"annualEstimatedSolarProduction","displayName":"Annual
+        Estimated Solar Production","description":"How many kWh the solar system is
+        estimated to produce in the first year. ","quantityUnit":"kWh"},{"applicabilityKey":"ashraeStandards","displayName":"ASHRAE
+        Standards","description":"Have a licensed contractor or engineer verify lighting
+        power density and/or verify through energy modeling that the portion of the
+        building being submitted for the tax credit is 25%-50% better than ASHRAE
+        90.1-2001 standards. Save all your receipts and equipment documentation. Consult
+        the IRS or your tax advisor."},{"applicabilityKey":"azimuth","displayName":"Azimuth","description":"Azimuth
+        angle (degrees)."},{"applicabilityKey":"classSpecialsSector","displayName":"Customer
+        Sector","description":"Subclassification for customer class  Special","choices":[{"displayValue":"Agriculture","value":"agriculture","dataValue":"agriculture","likelihood":null},{"displayValue":"Government","value":"government","dataValue":"government","likelihood":null},{"displayValue":"Non
+        Profit","value":"nonProfit","dataValue":"nonProfit","likelihood":null},{"displayValue":"School","value":"school","dataValue":"school","likelihood":null},{"displayValue":"Other","value":"other","dataValue":"other","likelihood":null}]},{"applicabilityKey":"constructionType","displayName":"Construction
+        Type","description":"Construction is new or existing","choices":[{"displayValue":"Retrofit","value":"retrofit","dataValue":"retrofit","likelihood":null},{"displayValue":"New
+        Construction","value":"new","dataValue":"new","likelihood":null},{"displayValue":"Operations
+        & Maintenance","value":"om","dataValue":"om","likelihood":null},{"displayValue":"Retired","value":"retire","dataValue":"retire","likelihood":null}]},{"applicabilityKey":"cpsLocalContractor","displayName":"CPS
+        Local Contractor","description":"Is the installer a CPS Energy approved local
+        contractor."},{"applicabilityKey":"demand","displayName":"Demand (kW)","description":"Quantity
+        in kW of load that is used for a given period"},{"applicabilityKey":"endUseCommercial","displayName":"End
+        Use Commercial","description":"End Use Technology for Commercial","choices":[{"displayValue":"Building
+        Shell","value":"buildingShell","dataValue":"buildingShell","likelihood":null},{"displayValue":"Heating","value":"airHeat","dataValue":"airHeat","likelihood":null},{"displayValue":"Cooling","value":"airCool","dataValue":"airCool","likelihood":null},{"displayValue":"Water
+        Heating","value":"waterHeat","dataValue":"waterHeat","likelihood":null},{"displayValue":"Lighting","value":"lighting","dataValue":"lighting","likelihood":null},{"displayValue":"Refrigeration","value":"refrigeration","dataValue":"refrigeration","likelihood":null},{"displayValue":"Processing
+        & Manufacturing Equipment","value":"processingEquipment","dataValue":"processingEquipment","likelihood":null},{"displayValue":"Food
+        Service & Restaurants","value":"foodService","dataValue":"foodService","likelihood":null},{"displayValue":"Motors
+        & Drives (VFD)","value":"motor","dataValue":"motor","likelihood":null},{"displayValue":"Appliances","value":"appliances","dataValue":"appliances","likelihood":null},{"displayValue":"Electronics","value":"electronics","dataValue":"electronics","likelihood":null},{"displayValue":"Pool","value":"pool","dataValue":"pool","likelihood":null},{"displayValue":"Irrigation","value":"irrigation","dataValue":"irrigation","likelihood":null},{"displayValue":"Electric
+        Vehicle","value":"ev","dataValue":"ev","likelihood":null},{"displayValue":"Custom
+        Use","value":"custom","dataValue":"custom","likelihood":null},{"displayValue":"Other","value":"other","dataValue":"other","likelihood":null}]},{"applicabilityKey":"endUseResidential","displayName":"End
+        Use Residential","description":"End Use Technology for Residential","choices":[{"displayValue":"Building
+        Shell","value":"buildingShell","dataValue":"buildingShell","likelihood":null},{"displayValue":"Heating
+        & Cooling","value":"airHeatCool","dataValue":"airHeatCool","likelihood":null},{"displayValue":"Water
+        Heating","value":"waterHeat","dataValue":"waterHeat","likelihood":null},{"displayValue":"Lighting","value":"lighting","dataValue":"lighting","likelihood":null},{"displayValue":"Major
+        Appliances","value":"majorAppliances","dataValue":"majorAppliances","likelihood":null},{"displayValue":"Electronics","value":"electronics","dataValue":"electronics","likelihood":null},{"displayValue":"Pool
+        & Spa","value":"pool","dataValue":"pool","likelihood":null},{"displayValue":"Electric
+        Vehicle","value":"ev","dataValue":"ev","likelihood":null},{"displayValue":"Custom
+        Usage","value":"custom","dataValue":"custom","likelihood":null},{"displayValue":"Other","value":"other","dataValue":"other","likelihood":null}]},{"applicabilityKey":"isAffectedByHurricaneSandy","displayName":"Is
+        Affected by Hurricane Sandy","description":"Is Affected by Hurricane Sandy?
+        (If your home is located in a zip code designated as a \"major\" or \"minor\"
+        damaged area impacted by Hurricane Sandy or home is located outside the eligible
+        zip code list, but have experienced damage caused by Hurricane Sandy)"},{"applicabilityKey":"isConEdCustomer","displayName":"Consolidated
+        Edison Customer","description":"Is the applicant a Consolidated Edison customer?"},{"applicabilityKey":"isLowIncome","displayName":"Low
+        Income Customer","description":"Is the customer considered low income by the
+        LSE. "},{"applicabilityKey":"isLowIncomeCustomer","displayName":"Is Low Income
+        Customer","description":"Customers who are (1) low-income senior citizens
+        over 62; (2) low-income customers with a permanent disability or those who
+        have a person with a permanent disability living in the household (3)  low-income
+        customers on life support."},{"applicabilityKey":"isPacificPowerCustomer","displayName":"Pacific
+        Power Customer","description":"Is the applicant a Pacific Power customer?"},{"applicabilityKey":"isPgeCustomer","displayName":"Portland
+        General Electric Customer","description":"Is the applicant a Portland General
+        Electric customer?"},{"applicabilityKey":"lowIncomeCustomer","displayName":"Is
+        Low Income Customer","description":"Customer who are enrolled in the Company''s
+        low-income program. To qualify for the low-income program, a Customer must
+        be enrolled in the Direct Vendor or Utility Guarantee Program and/or receiving
+        benefits under Supplemental Security Income, Temporary Assistance to Needy
+        Persons/Families, Safety Net Assistance, or Food Stamps, or have received
+        a Home Energy Assistance Program grant in the preceding 12 months."},{"applicabilityKey":"mobileHome","displayName":"Is
+        a Mobile Home","description":"Mobile homes or static caravans (also informally
+        called caravans or trailers) are prefabricated homes built in factories, rather
+        than on site, and then taken to the place where they will be occupied."},{"applicabilityKey":"peakDemandReduction","displayName":"Peak
+        Demand Reduction","description":"Peak Demand Reduction by a customer"},{"applicabilityKey":"recRetained","displayName":"REC
+        Retained","description":"Whether the owner has chosen to retain their REC
+        (Renewable Energy Credits).  "},{"applicabilityKey":"rmldLocalContractorAndManufacturer","displayName":"RMLD
+        Local Contractor and Manufacturer","description":"Is the system installer
+        and parts manufacturer a Reading Municipal Light Department approved local
+        business."},{"applicabilityKey":"singleFamilyHome","displayName":"Is a Single
+        Family Home","description":"A single-family detached home, also called a single-detached
+        dwelling or separate house is a free-standing residential building."},{"applicabilityKey":"specificApplicability","displayName":"Specific
+        Applicability","description":"Specific Customer''s applicability"}],"pageStart":0,"pageCount":25}'
+    http_version: 
+  recorded_at: Fri, 22 Apr 2016 00:57:24 GMT
+recorded_with: VCR 3.0.1

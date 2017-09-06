@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/public/territories/3539
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 03 May 2016 23:10:42 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":1,"type":"Territory","results":[{"territoryId":3539,"territoryName":"Baseline
+        Region V","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-124.06306692000003,"latitude":40.690513440000004}}]}'
+    http_version: 
+  recorded_at: Tue, 03 May 2016 23:10:43 GMT
+recorded_with: VCR 3.0.1

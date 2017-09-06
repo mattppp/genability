@@ -1,10 +1,10 @@
 require File.expand_path('../../spec_helper', __FILE__)
 
-describe Genability::Client do
+describe Genability::Client, vcr: true do
 
   Genability::Configuration::VALID_FORMATS.each do |format|
 
-    context ".new(:format => '#{format}')" do
+    context "tariff.#{format}" do
 
       before(:all) do
         @options = {:format => format}.merge(configuration_defaults)
@@ -13,27 +13,24 @@ describe Genability::Client do
 
       context ".tariffs" do
 
-        use_vcr_cassette "tariffs"
-
         it "should return an array of tariffs" do
           tariffs = @client.tariffs
           tariffs.should be_an Array
-          tariffs.first.tariff_id.should == 447
         end
 
-        # this example also demonstrates searching within results
         it "should allow searches by lse_id" do
-          tariffs = @client.tariffs(:lse_id => 734)
-          tariffs.select{|x| x['tariffCode'] == "E-7"}.first.tariff_code.should == "E-7"
+          @client.tariffs(:lse_id => 734).each do |tariff|
+            tariff.lse_id.should == 734
+          end
         end
 
-        it "should accept a string for customerClasses and tariffTypes parameters" do
+        it "should accept a string for customerClass" do
           @client.tariffs(:customer_classes => 'residential').each do |tariff|
             tariff.customer_class.should =~ /RESIDENTIAL/
           end
         end
 
-        it "should accept an array for customerClasses and tariffTypes parameters" do
+        it "should accept an array for tariffTypes" do
           @client.tariffs(:tariff_types => ['default', 'alternative']).each do |tariff|
             tariff.tariff_type.should =~ /(DEFAULT)|(ALTERNATIVE)/
           end
@@ -43,8 +40,6 @@ describe Genability::Client do
 
       context ".tariff" do
 
-        use_vcr_cassette "tariff"
-
         it "should return a tariff" do
           tariff = @client.tariff(512)
           tariff.should be_a Hashie::Mash
@@ -52,11 +47,10 @@ describe Genability::Client do
         end
 
         it "should return a tariff with rates and properties" do
-          tariff = @client.tariff(512, { :populate_rates => 'ture', :populate_properties => 'true' })
+          tariff = @client.tariff(512, { :populate_rates => 'true', :populate_properties => 'true' })
           tariff.should be_a Hashie::Mash
           tariff.properties.count.should > 0
           tariff.rates.count.should > 0
-          tariff.master_tariff_id.should == 512
         end
 
       end

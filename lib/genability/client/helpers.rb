@@ -61,7 +61,102 @@ module Genability
         }.delete_if{ |k,v| v.nil? }
       end
 
+      def properties_params(options = nil)
+        return nil if options.nil?
+        options.map do |key_name, data|
+          [
+            ruby_to_camel_case(key_name),
+            {
+              'keyName' => ruby_to_camel_case(key_name),
+              'dataValue' => data.is_a?(Hash) ? data[:data_value] : data
+            }
+          ]
+        end.to_h.delete_if{ |k,v| v['dataValue'].nil? }
+      end
+
+      def tariff_inputs_params(tariff_inputs)
+        return nil if tariff_inputs.nil?
+        case tariff_inputs
+        when Hash
+          [convert_tariff_input(tariff_inputs)]
+        when Array
+          tariff_inputs.map{|t| convert_tariff_input(t)}
+        else
+          raise Genability::InvalidInput
+        end
+      end
+
+      def convert_tariff_input(options)
+        {
+          "scenarios" => options[:scenarios],
+          "fromDateTime" => format_to_iso8601(options[:from] || options[:from_date_time]),
+          "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
+          "keyName" => ruby_to_camel_case(options[:key_name]),
+          "dataValue" => options[:data_value],
+          "dataType" => convert_to_upcase(options[:data_type]),
+          "dataFactor" => options[:data_factor],
+          "unit" => options[:unit],
+          "operator" => options[:operator]
+        }.
+        delete_if{ |k,v| v.nil? }
+      end
+
+      def rate_inputs_params(rate_inputs)
+        return nil if rate_inputs.nil?
+        case rate_inputs
+        when Hash
+          [convert_rate_input(rate_inputs)]
+        when Array
+          rate_inputs.map{|p| convert_rate_input(p)}
+        else
+          raise Genability::InvalidInput
+        end
+      end
+
+      def convert_rate_input(options)
+        {
+          "scenarios" => options[:scenarios],
+          "fromDateTime" => format_to_iso8601(options[:from] || options[:from_date_time]),
+          "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
+          "chargeType" => convert_to_upcase(options[:charge_type]),
+          "chargeClass" => convert_to_upcase(options[:charge_class]),
+          "tariffBookRateName" => options[:tariff_book_rate_name],
+          "rateName" => options[:rate_name],
+          "rateGroupName" => options[:rate_group_name],
+          "rateBands" => rate_bands_params(options[:rate_bands])
+        }.
+        delete_if{ |k,v| v.nil? }
+      end
+
+      def rate_bands_params(rate_bands)
+        return nil if rate_bands.nil?
+        case rate_bands
+        when Hash
+          [convert_rate_band(rate_bands)]
+        when Array
+          rate_bands.map{|r| convert_rate_band(r)}
+        else
+          raise Genability::InvalidInput
+        end
+      end
+
+      def convert_rate_band(options)
+        {
+          "rateAmount" => options[:rate_amount],
+          "rateUnit" => convert_to_upcase(options[:rate_unit]),
+          "hasConsumptionLimit" => convert_to_boolean(options[:has_consumption_limit]),
+          "isCredit" => convert_to_boolean(options[:is_credit])
+        }.
+        delete_if{ |k,v| v.nil? }
+      end
+
+      def convert_to_upcase(value = nil)
+        return nil if value.nil? || value.to_s.nil?
+        value.to_s.upcase
+      end
+
       def convert_to_boolean(value = nil)
+        return value if !value.is_a?(String)
         return nil if value.nil? || value.empty?
         value == "false" ? nil : "true"
       end
@@ -69,9 +164,9 @@ module Genability
       def multi_option_handler(value = nil)
         return nil if value.nil?
         if value.is_a?(Array)
-          value.collect{|x| x.upcase}.join(',')
+          value.collect{|x| x.to_s.upcase}.join(',')
         else
-          value.upcase
+          value.to_s.upcase
         end
       end
 
@@ -95,6 +190,27 @@ module Genability
         date_time.iso8601(1).gsub(/(?<=\-\d{2}):(?=\d{2})/, '')
       rescue
         nil
+      end
+
+      def format_to_ymd(date_time = nil)
+        if date_time.respond_to?(:strftime)
+          date_time.strftime("%Y-%m-%d")
+        else
+          parse_and_format_to_ymd(date_time)
+        end
+      end
+
+      def parse_and_format_to_ymd(date_time = nil)
+        parsed_date = Chronic.parse(date_time.to_s)
+        parsed_date = parsed_date.nil? ? Time.parse(date_time.to_s) : parsed_date
+        parsed_date.strftime("%Y-%m-%d")
+      rescue
+        nil
+      end
+
+      def ruby_to_camel_case(str)
+        return nil if str.nil?
+        str.to_s.gsub(/(?:^|_)(.)/){ $1.upcase }.gsub(/^[A-Z]/){ $&.downcase }
       end
 
     end

@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/v1/calculate/512?cityLimits=Inside&connectionType=Primary%20Connection&fromDateTime=2016-01-01T00:00:00.0-0500&toDateTime=2016-01-02T00:00:00.0-0500
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 22 Apr 2016 00:57:38 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":3,"type":"PropertyData","results":[{"keyName":"cityLimits","displayName":"Service
+        Area (Inside/outside city limits)","family":"service","keyspace":"electricity","dataType":"CHOICE","fromDateTime":"2016-01-01T00:00:00-05:00","toDateTime":"2016-01-02T00:00:00-05:00","dataValue":"Inside","accuracy":100},{"keyName":"isLowIncomeSeniorCitizen953","displayName":"Is
+        Low Income Senior Citizen","description":"Customers who are at least 62 years
+        of age or older or be a disabled person as evidenced by receiving Supplemental
+        Security Income (SSI) or State Supplemental Payment (SSP) and whose total
+        gross annual income for all persons in the applicant''s household may not
+        exceed seventy-five (75) percent of the most recent median income levels.","dataType":"BOOLEAN","fromDateTime":"2016-01-01T00:00:00-05:00","toDateTime":"2016-01-02T00:00:00-05:00","dataValue":"false","accuracy":80},{"keyName":"consumption","dataType":"DECIMAL","fromDateTime":"2016-01-01T00:00:00-05:00","toDateTime":"2016-01-02T00:00:00-05:00","unit":"kWh"}]}'
+    http_version: 
+  recorded_at: Fri, 22 Apr 2016 00:57:39 GMT
+recorded_with: VCR 3.0.1

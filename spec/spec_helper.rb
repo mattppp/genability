@@ -29,10 +29,11 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
 end
 
-VCR.config do |c|
+VCR.configure do |c|
+  c.configure_rspec_metadata!
   c.ignore_localhost = true
   c.cassette_library_dir = 'spec/cassettes'
-  c.stub_with :webmock #:typhoeus, :faraday, :fakeweb, or :webmock
+  c.hook_into :webmock #:typhoeus, :faraday, :fakeweb, or :webmock
   c.default_cassette_options = { :record => :new_episodes }
   c.filter_sensitive_data('ValidAppID') { CONFIGURATION_DEFAULTS[:application_id] }
   c.filter_sensitive_data('ValidAppKey') { CONFIGURATION_DEFAULTS[:application_key] }

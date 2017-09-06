@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://ValidAppID:ValidAppKey@api.genability.com/rest/public/territories?lseId=734
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      User-Agent:
+      - Genability API Ruby Gem
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 03 May 2016 23:10:42 GMT
+      Server:
+      - Apache-Coyote/1.1
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":"success","count":11,"type":"Territory","results":[{"territoryId":807,"territoryName":"Service
+        area for CA","lseId":734,"lseName":"Pacific Gas & Electric Co","usageType":"SERVICE","itemTypes":"COUNTY","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-121.35850650459477,"latitude":37.825256018379214}},{"territoryId":3534,"territoryName":"Baseline
+        Region P","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-121.25965298684213,"latitude":38.81323759210526}},{"territoryId":3535,"territoryName":"Baseline
+        Region Q","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-121.92218766666667,"latitude":37.018478}},{"territoryId":3536,"territoryName":"Baseline
+        Region R","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-119.45533490449439,"latitude":37.08063061797762}},{"territoryId":3537,"territoryName":"Baseline
+        Region S","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-121.43255658024694,"latitude":38.47617793415638}},{"territoryId":3538,"territoryName":"Baseline
+        Region T","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-122.0622513529413,"latitude":37.268442714285754}},{"territoryId":3539,"territoryName":"Baseline
+        Region V","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-124.06306692000003,"latitude":40.690513440000004}},{"territoryId":3540,"territoryName":"Baseline
+        Region W","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-119.22503353333337,"latitude":35.71898616666665}},{"territoryId":3541,"territoryName":"Baseline
+        Region X","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-122.0893179725087,"latitude":37.60216264261169}},{"territoryId":3542,"territoryName":"Baseline
+        Region Y","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-121.54436931081078,"latitude":39.6615340945946}},{"territoryId":3543,"territoryName":"Baseline
+        Region Z","lseId":734,"lseName":"Pacific Gas & Electric Co","parentTerritoryId":807,"usageType":"TARIFF","itemTypes":"ZIPCODE","deregRes":false,"deregCandi":false,"centerPoint":{"longitude":-120.64584263636362,"latitude":39.317859545454546}}],"pageStart":0,"pageCount":25}'
+    http_version: 
+  recorded_at: Tue, 03 May 2016 23:10:42 GMT
+recorded_with: VCR 3.0.1

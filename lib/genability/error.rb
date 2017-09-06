@@ -5,6 +5,9 @@ module Genability
   # Raised when Genability returns the HTTP status code 400
   class BadRequest < Error; end
 
+  # Raised when Genability returns the HTTP status code 401
+  class Unauthorized < Error; end
+
   # Raised when Genability returns the HTTP status code 403
   class Forbidden < Error; end
 
@@ -16,6 +19,9 @@ module Genability
 
   # Raised when Genability returns the HTTP status code 503
   class ServiceUnavailable < Error; end
+
+  # Raised when Genability returns an ill-formatted response body
+  class InvalidResponseFormat < Error; end
 
   # Raised when the tariff input for the calculate method is
   # not an array or hash

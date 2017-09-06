@@ -93,7 +93,7 @@ module Genability
       # @example Return a list of territories for Pacific Gas & Electric Co
       #   Genability.territories(:lse_id => 734)
       # @example Get a Territory ID from a Zipcode
-      #   Genability.territories(:lse_id => 734, :contains_item_type => 'ZIPCODE', :contains_item_value => 94115)
+      #   Genability.territories(:lse_id => 734, :zip_code => 94115)
       def territories(options = {})
         get("public/territories", territories_params(options)).results
       end
@@ -102,17 +102,20 @@ module Genability
 
       def territory_params(options)
         {
-          'populateItems' => convert_to_boolean(options[:populate_items])
+          'populateItems' => convert_to_boolean(options[:populate_items]),
+          'populateLses' => options[:populate_lses]
         }.delete_if{ |k,v| v.nil? }
       end
 
       def territories_params(options)
         {
           'lseId' => options[:lse_id],
+          'zipCode' => options[:zip_code] || options[:post_code],
+          'addressString' => options[:address_string] || options[:address],
+          'lat' => options[:lat],
+          'lng' => options[:lng],
           'masterTariffId' => options[:master_tariff_id],
-          'containsItemType' => options[:contains_item_type],
-          'containsItemValue' => options[:contains_item_value],
-          'usageType' => options[:usage_type]
+          'usageTypes' => options[:usage_type]
         }.delete_if{ |k,v| v.nil? }.
           merge( territory_params(options) ).
           merge( search_params(options) ).

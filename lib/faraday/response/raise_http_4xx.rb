@@ -1,4 +1,5 @@
 require 'faraday'
+require 'hashie'
 
 # @private
 module Faraday
@@ -9,6 +10,8 @@ module Faraday
       case env[:status].to_i
       when 400
         raise Genability::BadRequest, error_message(env)
+      when 401
+        raise Genability::Unauthorized, error_message(env)
       when 403
         raise Genability::Forbidden, error_message(env)
       when 404
@@ -26,12 +29,14 @@ module Faraday
       if body.nil?
         nil
       else
-        "ERRORS:#{body.count}#{error_details(body)}"
+        body = JSON.parse(body) if body.is_a?(String)
+        "ERRORS:#{body["results"].count}#{error_details(body)}"
       end
     end
 
     def error_details(body)
       msg = ""
+      body = Hashie::Mash.new(body) if !body.is_a?(Hashie::Mash)
       body.results.each_with_index do |result, i|
         msg << " #{i+1}[code:#{result.code} object_name:#{result.objectName} property_name:#{result.propertyName} message:#{result.message}]"
       end

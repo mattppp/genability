@@ -1,5 +1,4 @@
 require 'faraday_middleware'
-require 'faraday/request/url_encoding_fix'
 require 'faraday/response/raise_http_4xx'
 require 'faraday/response/raise_http_5xx'
 
@@ -11,27 +10,28 @@ module Genability
     def connection(raw=false)
       # raise if id or key is missing
       options = {
-        :headers => {'Accept' => "application/#{format}; charset=utf-8", 'User-Agent' => user_agent},
         :proxy => proxy,
         :ssl => {:verify => false},
         :url => endpoint
       }
 
       Faraday::Connection.new(options) do |connection|
-        #connection.use Faraday::Request::OAuth2, client_id, access_token
-        connection.use Faraday::Request::UrlEncodingFix
-        connection.use Faraday::Response::RaiseHttp4xx
-        connection.use Faraday::Response::Mashify unless raw
+        connection.adapter adapter
+        connection.basic_auth application_id, application_key
+        connection.headers['Accept'] = "application/#{format}; charset=utf-8"
+        connection.headers['User-Agent'] = user_agent
+        connection.request :json
+        connection.request :multipart
+        connection.response :mashify unless raw
+        connection.response :logger if debug_logging
         unless raw
           case format.to_s.downcase
           when 'json'
-            connection.use Faraday::Response::ParseJson
+            connection.response :json, :content_type => /\bjson$/
           end
         end
+        connection.use Faraday::Response::RaiseHttp4xx
         connection.use Faraday::Response::RaiseHttp5xx
-        connection.use Faraday::Request::Multipart
-        connection.use Faraday::Request::UrlEncoded
-        connection.adapter(adapter)
       end
     end
   end
