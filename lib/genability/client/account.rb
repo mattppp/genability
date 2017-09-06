@@ -11,6 +11,10 @@ module Genability
         put("v1/accounts", add_account_params(options)).results.first
       end
 
+      def update_account(provider_account_id, options)
+        put("v1/accounts/pid/#{provider_account_id}", add_account_params(options)).results.first
+      end
+
       def delete_account(account_id)
         delete("v1/accounts/#{account_id}")
       end
