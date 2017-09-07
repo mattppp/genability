@@ -9,6 +9,10 @@ module Genability
         post("v1/calculate/#{tariff_id}", calculate_params(options)).results.first
       end
 
+      def calculate_by_account(provider_account_id, options = {})
+        post("v1/accounts/pid/#{provider_account_id}/calculate", calculate_params(options))
+      end
+
       private
 
       def calculate_meta_params(options)
@@ -28,6 +32,7 @@ module Genability
         {
           "accountId" => options[:account_id],
           "providerAccountId" => options[:provider_account_id],
+          "minimums" => options[:minimums],
           "fromDateTime" => format_to_iso8601(options[:from] || options[:from_date_time]),
           "toDateTime" => format_to_iso8601(options[:to] || options[:to_date_time]),
           "billingPeriod" => convert_to_boolean(options[:billing_period]),
