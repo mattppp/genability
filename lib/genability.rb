@@ -23,8 +23,8 @@ module Genability
   end
 
   # Delegate to Genability::Client
-  def self.respond_to?(method)
-    return client.respond_to?(method) || super
+  def self.respond_to?(*several_variants)
+    return client.respond_to?(*several_variants) || super
   end
 
 end
