@@ -10,7 +10,7 @@ module Genability
       end
 
       def calculate_by_account(provider_account_id, options = {})
-        post("v1/accounts/pid/#{provider_account_id}/calculate", calculate_params(options))
+        post("v1/accounts/pid/#{provider_account_id}/calculate", calculate_params(options)).results.first
       end
 
       private
