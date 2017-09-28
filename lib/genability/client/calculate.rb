@@ -43,7 +43,8 @@ module Genability
           "rateInputs" => rate_inputs_params(options[:rate_inputs]),
           "serviceType" => options[:service_type],
           "masterTariffId" => options[:master_tariff_id],
-          "profileId" => options[:profile_id]
+          "profileId" => options[:profile_id],
+          "propertyInputs" => options[:property_inputs]
         }.
         delete_if{ |k,v| v.nil? }
       end
